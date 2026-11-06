@@ -1,0 +1,1 @@
+{"passed": false, "base": "37e5efaa5a073310ff5aeed3119e0ab9d3c926d0", "problems": [{"code": "weak_before", "detail": "E12b"}], "tests": [{"id": "E12a", "head": "pass", "base": "fail"}, {"id": "E12b", "head": "pass", "base": "weak"}]}

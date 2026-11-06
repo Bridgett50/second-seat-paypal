@@ -1,0 +1,11 @@
+
+ RUN  v2.1.8 /tmp/e/g3a3/services/bot
+
+ ✓ test/g3a-identity.test.ts > G3a frozen settings reach execution (part 3) > G3-6
+ ✓ test/g3a-identity.test.ts > G3a frozen settings reach execution (part 3) > G3-7 732ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  18:31:20
+   Duration  1.41s (transform 130ms, setup 42ms, collect 62ms, tests 1.03s, environment 0ms, prepare 52ms)
+

@@ -1,0 +1,20 @@
+   × G2a canonical config composition > G2-1 141ms
+     → flat-nested-mismatch: main blocked a canonical nested config (code=2 blockers=BLOCKED: dataset selection missing: frozen config has no dataset | BLOCKED: review incomplete: need reviewed attestation for dataset sha | BLOCKED: source_sha invalid or placeholder: None | BLOCKED: image tag mutable: must pin @sha256 digest, got {'ref': 'registry.invalid/dummy@sha256:7777777777777777777777777777777777777777777777777777777777777777', 'digest': 'sha256:7777777777777777777777777777777777777777777777777777777777777777'} | BLOCKED: model_revision unpinned: must be 40 hex, got None | BLOCKED: source_sha does not match git HEAD: None != 'e5b490d7d607eccd974bd733a493bda9e19ad67f' stdout=None
+   × G2a canonical config composition > G2-2 124ms
+     → no-projection-binding: lc.project_launch is missing (parent has no projection): expected null not to be null // Object.is equality
+   × G2a canonical config composition > G2-4 330ms
+     → legacy-downgrade: eval_in_container.local threw TypeError: eval_in_container() takes 1 positional argument but 2 were given: expected 'TypeError: eval_in_container() takes …' to be null // Object.is equality
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  test/g2-composition.test.ts > G2a canonical config composition > G2-1
+AssertionError: flat-nested-mismatch: main blocked a canonical nested config (code=2 blockers=BLOCKED: dataset selection missing: frozen config has no dataset | BLOCKED: review incomplete: need reviewed attestation for dataset sha | BLOCKED: source_sha invalid or placeholder: None | BLOCKED: image tag mutable: must pin @sha256 digest, got {'ref': 'registry.invalid/dummy@sha256:7777777777777777777777777777777777777777777777777777777777777777', 'digest': 'sha256:7777777777777777777777777777777777777777777777777777777777777777'} | BLOCKED: model_revision unpinned: must be 40 hex, got None | BLOCKED: source_sha does not match git HEAD: None != 'e5b490d7d607eccd974bd733a493bda9e19ad67f' stdout=None
+ FAIL  test/g2-composition.test.ts > G2a canonical config composition > G2-2
+AssertionError: no-projection-binding: lc.project_launch is missing (parent has no projection): expected null not to be null // Object.is equality
+    329|     expect(eq.out, "no-projection-binding: lc.project_launch is missin…
+    330|     expect(eq.out.errs, `no-projection-binding: projection of the cano…
+    331|     expect(eq.out.flat, "no-projection-binding: lc.project_launch(cfg)…
+ FAIL  test/g2-composition.test.ts > G2a canonical config composition > G2-4
+AssertionError: legacy-downgrade: eval_in_container.local threw TypeError: eval_in_container() takes 1 positional argument but 2 were given: expected 'TypeError: eval_in_container() takes …' to be null // Object.is equality
+    513|       expect(local.out.threw, `legacy-downgrade: eval_in_container.loc…
+    514|       expect(local.out.runs, `legacy-downgrade: absent config bytes st…
+    515|       expect(fake.requests(), "legacy-downgrade: fake inference server…
+      Tests  3 failed | 1 passed (4)

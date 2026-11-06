@@ -1,0 +1,5 @@
+ ✓ test/g4b-terms.test.ts > G4b terms and capability claims match evidence > G4-6
+ ✓ test/g4b-terms.test.ts > G4b terms and capability claims match evidence > G4-7
+ ✓ test/g4b-terms.test.ts > G4b terms and capability claims match evidence > G4-4r
+ ✓ test/g4b-terms.test.ts > G4b terms and capability claims match evidence > G4-8g
+      Tests  4 passed (4)

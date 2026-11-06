@@ -1,0 +1,14 @@
+
+ RUN  v2.1.8 /tmp/e/g9/services/bot
+
+ ✓ test/g9-clients.test.ts > g9 clients > CR2-support-cap
+ ✓ test/g9-clients.test.ts > g9 clients > CR2-classify-cap
+ ✓ test/g9-clients.test.ts > g9 clients > CR2-support-no-body
+ ✓ test/g9-clients.test.ts > g9 clients > CR2-classify-no-body
+ ✓ test/g9-clients.test.ts > g9 clients > CR4-citation
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  21:18:34
+   Duration  584ms (transform 266ms, setup 46ms, collect 237ms, tests 52ms, environment 0ms, prepare 46ms)
+

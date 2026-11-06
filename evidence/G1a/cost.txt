@@ -1,0 +1,3 @@
+  69dbfc59-7805-4a9f-9cea-48da4a39fa9e main_root: 60 calls in=7104424 cached=6953212 out=105070 $1.679
+  69dbfc59-7805-4a9f-9cea-48da4a39fa9e reminder_child: 62 calls in=971630 cached=777001 out=33593 $0.503
+69dbfc59-7805-4a9f-9cea-48da4a39fa9e TOTAL $2.181

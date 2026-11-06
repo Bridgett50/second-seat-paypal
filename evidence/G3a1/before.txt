@@ -1,0 +1,8 @@
+   × g3a frozen settings reach execution > G3-1 13ms
+     → timeout-not-applied: transport not aborted at requestMs 1234: expected false to be true // Object.is equality
+   × g3a frozen settings reach execution > G3-2 166ms
+     → deadline-ignored: manifest deadline_ms must equal frozen workDeadlineS 7s: expected undefined to be 7000 // Object.is equality
+   × g3a frozen settings reach execution > G3-3 3ms
+     → invalid-concurrency-accepted: concurrency 0 must throw before any request: expected 'null' to match 'runEval: invalid concurrency'
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+      Tests  3 failed | 2 passed (5)

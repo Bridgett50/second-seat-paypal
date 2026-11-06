@@ -1,0 +1,6 @@
+ ✓ test/g3b-staging.test.ts > G3b staging fail-closed and single Spark attempt > G3-8
+ ✓ test/g3b-staging.test.ts > G3b staging fail-closed and single Spark attempt > G3-9
+ ✓ test/g3b-staging.test.ts > G3b staging fail-closed and single Spark attempt > G3-10g
+ ✓ test/g3b-staging.test.ts > G3b staging fail-closed and single Spark attempt > G3-11g
+ ✓ test/g3b-staging.test.ts > G3b staging fail-closed and single Spark attempt > G3-12g
+      Tests  5 passed (5)

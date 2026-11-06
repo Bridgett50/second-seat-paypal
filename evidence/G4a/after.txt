@@ -1,0 +1,8 @@
+ ✓ test/g4a-negative.test.ts > G4a negative pressure evidence > G4-1
+ ✓ test/g4a-negative.test.ts > G4a negative pressure evidence > G4-2
+ ✓ test/g4a-negative.test.ts > G4a negative pressure evidence > G4-3
+ ✓ test/g4a-negative.test.ts > G4a negative pressure evidence > G4-4g
+      Tests  4 passed (4)
+ ✓ test/g4a-negative.test.ts > G4a adapter negative pressure evidence > G4-2b
+ ✓ test/g4a-negative.test.ts > G4a adapter negative pressure evidence > G4-5g
+      Tests  2 passed (2)

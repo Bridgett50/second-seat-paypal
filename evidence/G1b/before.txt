@@ -1,0 +1,23 @@
+PASS H1
+PASS H2
+PASS H3
+PASS H4
+PASS H5
+PASS H6
+PASS H7
+FAIL H8: st=1 v={"passed": false, "base": "510ca041ec0b325a1b95c8a12f38c5ab53a2877c", "problems": [{"code": "weak_before", "detail": "T8"}], "tests": [{"id": "T8", "head": "pass", "base": "weak"}]}
+PASS H9
+PASS H10
+PASS H12
+PASS H11
+PASS G1-1
+PASS G1-2
+PASS G1-3
+PASS G1-4
+FAIL G1-5: empty-accepted empty-exit-zero;empty-no-code;empty-passed-true; v={"passed": true, "base": "86aba9798da9fa20254ebd4455b09c1350774c8c", "problems": [], "tests": []} v2={"passed": true, "base": "86aba9798da9fa20254ebd4455b09c1350774c8c", "problems": [], "tests": [{"id": "G15T", "head": "pass", "base": "fail"}]}
+FAIL G1-6: b-certified i-exit-zero;i-no-pob;i-no-B;i-cases:missing-cases;ii-cases:missing-cases; v={"passed": true, "base": "f422fd9e70ee2a25f31ffebee1ba497e50b84d52", "problems": [], "tests": [{"id": "G16T", "head": "pass", "base": "fail"}]} v2={"passed": true, "base": "f422fd9e70ee2a25f31ffebee1ba497e50b84d52", "problems": [], "tests": [{"id": "G16T", "head": "pass", "base": "fail"}]}
+FAIL G1-7: wrong-reason-accepted a:br=None;a:class=None;a:cert=None;a:no-invalid_before;b:exit-zero;b:br=None;b:class=None;b:cert=None;b:no-invalid_before;c:exit-zero;c:br=None;c:class=None;c:cert=None;c:no-invalid_before;d:exit-zero;d:br=None;d:class=None;d:cert=None;d:no-invalid_before;e:br=None;e:class=None;e:cert=None;e:no-invalid_before;f:br=None;f:class=None;f:cert=None;g:br=None;g:class=None;g:cert=None;g:no-invalid_before;
+FAIL G1-8: weakening-certified bare-no-code;disc-exit=1;disc-cert=None/None;
+FAIL G1-9: missing-identity parent=None;head=None;tree=None;no-limitations;no-cases; v={"passed": true, "base": "849aca1e66b92f13e2943c73c09d72edd68208a6", "problems": [], "tests": [{"id": "G19T", "head": "pass", "base": "fail"}]}
+SELF-TEST FAILED
+exit 1

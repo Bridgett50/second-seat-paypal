@@ -1,0 +1,12 @@
+   × G4a negative pressure evidence > G4-1 9ms
+   × G4a negative pressure evidence > G4-2 2ms
+   × G4a negative pressure evidence > G4-3 3ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: contradictory-none-accepted: none with a positive span is not valid_negative: expected 'valid_negative' not to be 'valid_negative' // Object.is equality
+AssertionError: invalid-none-accepted: unknown segment is not valid_negative: expected 'valid_negative' not to be 'valid_negative' // Object.is equality
+AssertionError: mixed-none-dropped: valid positive + invalid none is failed: expected 'valid_positive' to be 'failed' // Object.is equality
+      Tests  3 failed | 1 passed (4)
+   × G4a adapter negative pressure evidence > G4-2b 46ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: adapter-none-unvalidated: unknown segment none rejects: expected 'NO_THROW' to be an instance of UnboundAssessmentError
+      Tests  1 failed | 1 passed (2)

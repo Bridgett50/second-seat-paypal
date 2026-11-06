@@ -1,0 +1,6 @@
+ ✓ test/g3a-runtime.test.ts > g3a frozen settings reach execution > G3-1
+ ✓ test/g3a-runtime.test.ts > g3a frozen settings reach execution > G3-2
+ ✓ test/g3a-runtime.test.ts > g3a frozen settings reach execution > G3-2g
+ ✓ test/g3a-runtime.test.ts > g3a frozen settings reach execution > G3-3
+ ✓ test/g3a-runtime.test.ts > g3a frozen settings reach execution > G3-3g
+      Tests  5 passed (5)

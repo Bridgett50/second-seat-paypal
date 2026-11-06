@@ -1,0 +1,3 @@
+  f1876237-8a3c-45e3-ad3f-e7b63b8bee78 main_root: 73 calls in=9793271 cached=9588680 out=76754 $2.020
+  f1876237-8a3c-45e3-ad3f-e7b63b8bee78 reminder_child: 87 calls in=1418342 cached=1175233 out=40666 $0.653
+f1876237-8a3c-45e3-ad3f-e7b63b8bee78 TOTAL $2.673

@@ -1,0 +1,8 @@
+   × G4b terms and capability claims match evidence > G4-6 11ms
+   × G4b terms and capability claims match evidence > G4-7 7ms
+   × G4b terms and capability claims match evidence > G4-4r 2ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: unrelated-term-accepted: ask from seg-3 must not resolve on a seg-2 item: expected 'mangrove' to be '' // Object.is equality
+AssertionError: pattern-mislabeled: server #pressure-source must read exactly 'deterministic pattern detection': expected 'offline pattern check' to be 'deterministic pattern detection' // Object.is e
+AssertionError: negative-invisible: rendered HTML must carry the negative marker: expected '<!DOCTYPE html>\n<html lang="en">\n<h…' to contain 'id="pressure-negative"'
+      Tests  3 failed | 1 passed (4)

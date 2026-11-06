@@ -1,0 +1,3 @@
+  1fa92077-9588-4288-acc7-bb18d9fc6236 main_root: 28 calls in=2045612 cached=1935723 out=19759 $0.512
+  1fa92077-9588-4288-acc7-bb18d9fc6236 reminder_child: 35 calls in=560852 cached=424781 out=18487 $0.312
+1fa92077-9588-4288-acc7-bb18d9fc6236 TOTAL $0.824

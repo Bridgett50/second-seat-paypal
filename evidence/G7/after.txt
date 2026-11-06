@@ -1,0 +1,7 @@
+ ✓ test/holdout-freeze.test.ts > holdout freeze > verifies a fresh dummy dataset with exit 0
+ ✓ test/holdout-freeze.test.ts > holdout freeze > exits 2 when --dir is missing
+ ✓ test/holdout-freeze.test.ts > holdout freeze > exits 1 when a transcript is tampered with
+ ✓ test/holdout-freeze.test.ts > holdout freeze > CR1-confine 404ms
+ ✓ test/holdout-freeze.test.ts > holdout freeze > CR1-all-failures
+ ✓ test/holdout-freeze.test.ts > holdout freeze > exits 1 when an annotation no longer occurs verbatim
+      Tests  6 passed (6)

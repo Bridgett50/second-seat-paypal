@@ -1,0 +1,80 @@
+
+ RUN  v2.1.8 /tmp/e/g3a3/services/bot
+
+ ❯ test/g3a-identity.test.ts (2 tests | 2 failed) 268ms
+   × G3a frozen settings reach execution (part 3) > G3-6 147ms
+     → function-settings-ignored: eval_in_container timeout not 611, got [3600,840]: expected [ 3600, 840 ] to include 611
+   × G3a frozen settings reach execution (part 3) > G3-7 120ms
+     → identity-unchecked: frozen-identities CLI failed (status=1 stderr=E_NOT_FOUND]: Cannot find module '/tmp/ss-test-run-REDbiP/g3aid-tree-F3V8AG/scripts/frozen-identities.mjs' imported from /tmp/ss-test-run-REDbiP/g3aid-tree-F3V8AG/
+    at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+    at moduleResolve (node:internal/modules/esm/resolve:952:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:642:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:591:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:574:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:236:38)
+    at ModuleLoader.import (node:internal/modules/esm/loader:539:34)
+    at node:internal/modules/run_main:174:35
+    at asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:11) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///tmp/ss-test-run-REDbiP/g3aid-tree-F3V8AG/scripts/frozen-identities.mjs'
+}
+
+Node.js v20.19.2
+); runtime identities are never compared: expected 1 to be +0 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/g3a-identity.test.ts > G3a frozen settings reach execution (part 3) > G3-6
+AssertionError: function-settings-ignored: eval_in_container timeout not 611, got [3600,840]: expected [ 3600, 840 ] to include 611
+ ❯ test/g3a-identity.test.ts:264:119
+    262|     const imp = app(r, env, "out = REC['fn_kwargs']");
+    263|     const timeouts = (imp.out as Array<Record<string, unknown>>).map((…
+    264|     expect(timeouts, `function-settings-ignored: eval_in_container tim…
+       |                                                                                                                       ^
+    265|     expect(timeouts, `function-settings-ignored: literal default 840 s…
+    266|     const captured = app(r, env, [
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  test/g3a-identity.test.ts > G3a frozen settings reach execution (part 3) > G3-7
+AssertionError: identity-unchecked: frozen-identities CLI failed (status=1 stderr=E_NOT_FOUND]: Cannot find module '/tmp/ss-test-run-REDbiP/g3aid-tree-F3V8AG/scripts/frozen-identities.mjs' imported from /tmp/ss-test-run-REDbiP/g3aid-tree-F3V8AG/
+    at finalizeResolution (node:internal/modules/esm/resolve:283:11)
+    at moduleResolve (node:internal/modules/esm/resolve:952:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:642:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:591:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:574:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:236:38)
+    at ModuleLoader.import (node:internal/modules/esm/loader:539:34)
+    at node:internal/modules/run_main:174:35
+    at asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:11) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///tmp/ss-test-run-REDbiP/g3aid-tree-F3V8AG/scripts/frozen-identities.mjs'
+}
+
+Node.js v20.19.2
+); runtime identities are never compared: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ frozenIdentities test/g3a-identity.test.ts:226:170
+    224|     cwd: tree, encoding: "utf8", env: { PATH: process.env["PATH"] ?? "…
+    225|   });
+    226|   expect(res.status, `identity-unchecked: frozen-identities CLI failed…
+       |                                                                                                                                                                          ^
+    227|   const line = res.stdout.split("\n").find((l) => l.trim().startsWith(…
+    228|   expect(line, "identity-unchecked: frozen-identities CLI printed no J…
+ ❯ test/g3a-identity.test.ts:304:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed (2)
+   Start at  18:31:16
+   Duration  657ms (transform 130ms, setup 38ms, collect 59ms, tests 268ms, environment 0ms, prepare 53ms)
+

@@ -1,0 +1,10 @@
+   × G2b run-directory ownership > G2-5 243ms
+     → staging-reuse-refusal: fresh run failed rc=1 node-runs=1 stderr=file:///tmp/ss-test-run-Y95F0Z/g2b-tree-IzKSjO/scripts/redaction-eval-runner.mjs:302
+   × G2b run-directory ownership > G2-6 234ms
+     → evidence-modified: completed run started 1 node eval subprocesses: expected 1 to be +0 // Object.is equality
+   × G2b run-directory ownership > G2-7 8ms
+     → no-failure-evidence: runEval did not throw an ownership failure (err=): expected '' to match /ownership failure at \S*manifest/i
+   × G2b run-directory ownership > G2-8 51ms
+     → silent-entry-drop: lc.rels_from_entries is missing (fetch silently drops out-of-prefix entries): expected false to be true // Object.is equality
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+      Tests  4 failed | 1 passed (5)

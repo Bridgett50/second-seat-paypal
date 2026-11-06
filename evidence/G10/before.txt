@@ -1,0 +1,8 @@
+   × g10 factory options > G10-1 defaultSupportJudge forwards maxAttempts and fetchImpl 55ms
+     → factory-options-dropped: global fetch must not be used when fetchImpl is given: expected 4 to be +0 // Object.is equality
+   × g10 factory options > G10-2 defaultPressureClassifier forwards maxAttempts and fetchImpl 15ms
+     → factory-options-dropped: global fetch must not be used when fetchImpl is given: expected 4 to be +0 // Object.is equality
+   × g10 factory options > G10-3 sparkProofClientOptions output drives both factories 7ms
+     → run-config-retry-ignored: support must honour retry.maxAttempts 2: expected +0 to be 2 // Object.is equality
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+      Tests  3 failed | 1 passed (4)

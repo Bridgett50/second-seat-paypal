@@ -1,0 +1,12 @@
+
+ RUN  v2.1.8 /tmp/e/g3a2/services/bot
+
+ ✓ test/g3a-limits.test.ts > g3a output/context/input/decoding limits > G3-4
+ ✓ test/g3a-limits.test.ts > g3a output/context/input/decoding limits > G3-4g
+ ✓ test/g3a-limits.test.ts > g3a output/context/input/decoding limits > G3-5
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  18:23:48
+   Duration  523ms (transform 180ms, setup 40ms, collect 110ms, tests 97ms, environment 0ms, prepare 54ms)
+

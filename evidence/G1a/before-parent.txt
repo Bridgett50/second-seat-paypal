@@ -1,0 +1,18 @@
+PASS H1
+PASS H2
+PASS H3
+PASS H4
+PASS H5
+PASS H6
+PASS H7
+PASS H8
+PASS H9
+PASS H10
+PASS H12
+PASS H11
+FAIL G1-1: sentinel-seen;no-no-checkout; v={"passed": true, "base": "5fbbaade0620df483e15396ce886a96cb70da655", "problems": [], "tests": [{"id": "G1T", "head": "pass", "base": "fail"}]}
+FAIL G1-2: exit-zero;no-policy_setup_failed;prepared-ran;base-ran;late-materialize;sentinel-seen; v={"passed": true, "base": "5fbbaade0620df483e15396ce886a96cb70da655", "problems": [], "tests": [{"id": "G1T", "head": "pass", "base": "fail"}]}
+FAIL G1-3: a-exit-zero;a-no-policy_missing;a-test-ran;a-worktree;a-sentinel;b-exit-zero;b-no-policy_invalid;b-test-ran;b-worktree;b-sentinel;c-sentinel;c-no-no-checkout;
+FAIL G1-4: A-sentinel;B-sentinel;C-exit-zero;C-no-policy_setup_failed;C-prepared-ran;C-base-ran;C-sentinel;
+SELF-TEST FAILED
+exit 1

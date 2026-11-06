@@ -1,0 +1,6 @@
+   × G3b staging fail-closed and single Spark attempt > G3-8 66ms
+   × G3b staging fail-closed and single Spark attempt > G3-9 54ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  test/g3b-staging.test.ts > G3b staging fail-closed and single Spark attempt > G3-8
+ FAIL  test/g3b-staging.test.ts > G3b staging fail-closed and single Spark attempt > G3-9
+      Tests  2 failed | 3 passed (5)

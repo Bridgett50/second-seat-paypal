@@ -1,0 +1,15 @@
+
+ RUN  v2.1.8 /tmp/e/g5/apps/web
+
+ ✓ test/g5-ledger.test.ts > G5 exact release evidence > G5-1
+ ✓ test/g5-ledger.test.ts > G5 exact release evidence > G5-2
+ ✓ test/g5-ledger.test.ts > G5 exact release evidence > G5-3
+ ✓ test/g5-ledger.test.ts > G5 exact release evidence > G5-4
+ ✓ test/g5-ledger.test.ts > G5 exact release evidence > G5-5
+ ✓ test/g5-ledger.test.ts > G5 exact release evidence > G5-6g
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  21:01:24
+   Duration  371ms (transform 98ms, setup 49ms, collect 31ms, tests 48ms, environment 0ms, prepare 47ms)
+

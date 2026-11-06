@@ -1,0 +1,117 @@
+
+ RUN  v2.1.8 /tmp/e/g9/services/bot
+
+ ❯ test/g9-clients.test.ts (5 tests | 5 failed) 47ms
+   × g9 clients > CR2-support-cap 7ms
+     → attempt-cap-ignored: should throw for 0: expected [Function] to throw an error
+   × g9 clients > CR2-classify-cap 1ms
+     → attempt-cap-ignored: should throw for 0: expected [Function] to throw an error
+   × g9 clients > CR2-support-no-body 30ms
+     → provider-body-embedded: 400 error must not contain body text: expected true to be false // Object.is equality
+   × g9 clients > CR2-classify-no-body 8ms
+     → provider-body-embedded: 400 error must not contain body text: expected true to be false // Object.is equality
+   × g9 clients > CR4-citation 1ms
+     → bad-citation: promptCache.ts must not contain "meta-docs/": expected true to be false // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/g9-clients.test.ts > g9 clients > CR2-support-cap
+AssertionError: attempt-cap-ignored: should throw for 0: expected [Function] to throw an error
+
+- Expected: 
+null
+
++ Received: 
+undefined
+
+ ❯ test/g9-clients.test.ts:71:113
+     69|   it("CR2-support-cap", async () => {
+     70|     // constructor validation
+     71|     expect(() => new (SparkSupportJudge as any)({ maxAttempts: 0 }), "…
+       |                                                                                                                 ^
+     72| 
+     73|     let calls = 0;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  test/g9-clients.test.ts > g9 clients > CR2-classify-cap
+AssertionError: attempt-cap-ignored: should throw for 0: expected [Function] to throw an error
+
+- Expected: 
+null
+
++ Received: 
+undefined
+
+ ❯ test/g9-clients.test.ts:95:119
+     93| 
+     94|   it("CR2-classify-cap", async () => {
+     95|     expect(() => new (SparkPressureClassifier as any)({ maxAttempts: 0…
+       |                                                                                                                       ^
+     96| 
+     97|     let calls = 0;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  test/g9-clients.test.ts > g9 clients > CR2-support-no-body
+AssertionError: provider-body-embedded: 400 error must not contain body text: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ test/g9-clients.test.ts:127:126
+    125|     try { await judge.gradeSupport(input); } catch (e) { err400 = e as…
+    126|     expect(err400, "provider-body-embedded: 400 should throw").not.toB…
+    127|     expect(err400!.message.includes("SECRET-PROVIDER-BODY"), "provider…
+       |                                                                                                                              ^
+    128|     expect(err400!.message.includes("400"), "provider-body-embedded: 4…
+    129| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  test/g9-clients.test.ts > g9 clients > CR2-classify-no-body
+AssertionError: provider-body-embedded: 400 error must not contain body text: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ test/g9-clients.test.ts:155:126
+    153|     try { await cls.classify(lines); } catch (e) { err400 = e as Error…
+    154|     expect(err400, "provider-body-embedded: 400 should throw").not.toB…
+    155|     expect(err400!.message.includes("SECRET-PROVIDER-BODY"), "provider…
+       |                                                                                                                              ^
+    156|     expect(err400!.message.includes("400"), "provider-body-embedded: 4…
+    157| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  test/g9-clients.test.ts > g9 clients > CR4-citation
+AssertionError: bad-citation: promptCache.ts must not contain "meta-docs/": expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ test/g9-clients.test.ts:168:103
+    166|   it("CR4-citation", async () => {
+    167|     const text = await readFile(new URL("../src/promptCache.ts", impor…
+    168|     expect(text.includes("meta-docs/"), 'bad-citation: promptCache.ts …
+       |                                                                                                       ^
+    169|     expect(text.includes("https://dev.meta.ai/docs/prompt-caching"), '…
+    170|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+ Test Files  1 failed (1)
+      Tests  5 failed (5)
+   Start at  21:18:23
+   Duration  564ms (transform 252ms, setup 36ms, collect 225ms, tests 47ms, environment 0ms, prepare 50ms)
+

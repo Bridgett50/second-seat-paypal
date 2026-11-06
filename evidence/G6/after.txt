@@ -1,0 +1,18 @@
+== run 1 playwright
+PASS G6-1g
+PASS G6-2g
+PASS G6-3g
+PASS G6-4g
+== run 1 vitest
+ ✓ test/g6-replay.test.ts > G6 replay rehearsal guards > G6-5g
+ ✓ test/g6-replay.test.ts > G6 replay rehearsal guards > G6-6g
+      Tests  2 passed (2)
+== run 2 playwright
+PASS G6-1g
+PASS G6-2g
+PASS G6-3g
+PASS G6-4g
+== run 2 vitest
+ ✓ test/g6-replay.test.ts > G6 replay rehearsal guards > G6-5g
+ ✓ test/g6-replay.test.ts > G6 replay rehearsal guards > G6-6g
+      Tests  2 passed (2)

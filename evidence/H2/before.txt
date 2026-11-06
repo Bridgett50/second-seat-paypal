@@ -1,0 +1,2 @@
+FAIL H14: backend: bt-model;bt-base-url;bt-auth;bt-no-web;bt-key-not-swapped;bogus-backend-not-exit2;
+SELF-TEST FAILED

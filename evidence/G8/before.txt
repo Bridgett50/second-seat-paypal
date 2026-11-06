@@ -1,0 +1,4 @@
+FAIL CR3-redirect: bash-write-allowed deny1= allow1= allow2= deny2=
+FAIL CR3-tools: bash-write-allowed  deny-missed[sed -i s/a/b/ src/b.sh]=>[]; deny-missed[cp src/a.sh src/b.sh]=>[]; deny-missed[mv src/a.sh docs/x]=>[]; deny-missed[rm src/b.sh]=>[]; deny-missed[tee src/b.sh < /dev/null]=>[]; deny-missed[touch src/b.sh]=>[]; deny-missed[git checkout -- src/b.sh]=>[]
+FAIL CR3-noscope: bash-write-allowed deny= allow=
+SELF-TEST FAILED

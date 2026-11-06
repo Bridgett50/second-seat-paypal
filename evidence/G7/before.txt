@@ -1,0 +1,11 @@
+   × holdout freeze > CR1-confine 195ms
+     → unconfined-path-accepted: traversal manifest key must exit 1: expected +0 to be 1 // Object.is equality
+   × holdout freeze > CR1-all-failures 95ms
+     → failures-dropped: must report dummy-01 hash mismatch: expected 'holdout-freeze: cannot read cases.jso…' to match /hash mismatch dummy-01\.txt/
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+AssertionError: unconfined-path-accepted: traversal manifest key must exit 1: expected +0 to be 1 // Object.is equality
+    110|       expect(result.exit, "unconfined-path-accepted: traversal manifes…
+AssertionError: failures-dropped: must report dummy-01 hash mismatch: expected 'holdout-freeze: cannot read cases.jso…' to match /hash mismatch dummy-01\.txt/
+    167|     expect(result.exit, "failures-dropped: tampered files plus bad cas…
+    168|     expect(result.output, "failures-dropped: must report dummy-01 hash…
+      Tests  2 failed | 4 passed (6)

@@ -1,0 +1,51 @@
+
+ RUN  v2.1.8 /tmp/e/g3a2/services/bot
+
+ ❯ test/g3a-limits.test.ts (3 tests | 2 failed) 66ms
+   × g3a output/context/input/decoding limits > G3-4 40ms
+     → output-as-context: --max-model-len must be contextTokens 8192, got 512: expected '512' to be '8192' // Object.is equality
+   × g3a output/context/input/decoding limits > G3-5 1ms
+     → decoding-constant: reasoning 'turbo' must be rejected: expected '' to match /reasoning/
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/g3a-limits.test.ts > g3a output/context/input/decoding limits > G3-4
+AssertionError: output-as-context: --max-model-len must be contextTokens 8192, got 512: expected '512' to be '8192' // Object.is equality
+
+Expected: "8192"
+Received: "512"
+
+ ❯ test/g3a-limits.test.ts:132:94
+    130|     // Server context comes from contextTokens, never from maxTokens.
+    131|     const mml = maxModelLen(vllmArgv(cfg));
+    132|     expect(mml, `output-as-context: --max-model-len must be contextTok…
+       |                                                                                              ^
+    133|     expect(mml, "output-as-context: --max-model-len reused the generat…
+    134| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  test/g3a-limits.test.ts > g3a output/context/input/decoding limits > G3-5
+AssertionError: decoding-constant: reasoning 'turbo' must be rejected: expected '' to match /reasoning/
+
+- Expected: 
+/reasoning/
+
++ Received: 
+""
+
+ ❯ test/g3a-limits.test.ts:194:7
+    192|       validateRunConfig(badReasoning).join(";"),
+    193|       "decoding-constant: reasoning 'turbo' must be rejected",
+    194|     ).toMatch(/reasoning/);
+       |       ^
+    195|     const badSeed = dummyConfig();
+    196|     (badSeed["decoding"] as Record<string, unknown>)["seed"] = 1.5;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed (3)
+   Start at  18:23:45
+   Duration  478ms (transform 170ms, setup 42ms, collect 99ms, tests 66ms, environment 0ms, prepare 50ms)
+

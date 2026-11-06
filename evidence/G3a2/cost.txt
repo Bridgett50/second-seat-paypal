@@ -1,0 +1,3 @@
+  2846b4fb-35ca-4c95-8da3-02c71d054302 main_root: 55 calls in=6380066 cached=6211542 out=41560 $1.319
+  2846b4fb-35ca-4c95-8da3-02c71d054302 reminder_child: 59 calls in=903312 cached=727397 out=35243 $0.479
+2846b4fb-35ca-4c95-8da3-02c71d054302 TOTAL $1.798

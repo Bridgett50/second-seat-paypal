@@ -1,0 +1,5 @@
+ ✓ test/g2-composition.test.ts (4 tests) 1333ms
+   ✓ G2a canonical config composition > G2-1 320ms
+   ✓ G2a canonical config composition > G2-2 476ms
+   ✓ G2a canonical config composition > G2-4 407ms
+      Tests  4 passed (4)

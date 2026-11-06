@@ -1,0 +1,6 @@
+  2cd2cb74-ab87-48bc-a1b0-adaaa70ea255 main_root: 21 calls in=1023820 cached=844244 out=8806 $0.389
+  2cd2cb74-ab87-48bc-a1b0-adaaa70ea255 reminder_child: 25 calls in=377867 cached=210847 out=21495 $0.332
+2cd2cb74-ab87-48bc-a1b0-adaaa70ea255 TOTAL $0.720
+  a8b8a231-220d-47ee-87e4-971642e0205c main_root: 50 calls in=4689400 cached=4386849 out=26273 $1.148
+  a8b8a231-220d-47ee-87e4-971642e0205c reminder_child: 55 calls in=900747 cached=662463 out=35988 $0.550
+a8b8a231-220d-47ee-87e4-971642e0205c TOTAL $1.698

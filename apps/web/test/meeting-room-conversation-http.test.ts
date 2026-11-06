@@ -1,0 +1,74 @@
+import { randomUUID } from "node:crypto";
+import { describe, it, expect, vi } from "vitest";
+import { meetingRoomSetCookie } from "../src/meetingRoom.js";
+import { makeContextApp } from "./fixtures/candidateContextApp.js";
+
+describe("meeting-room conversation HTTP", () => {
+  it("ingest via real HTTP, foreign 404, finish race, ownerId 400", async () => {
+    const app = makeContextApp();
+    const server = app.server;
+    const prepareSpy = vi.spyOn(app.gate, "prepare");
+    let key: string | undefined;
+    let roomId: string | undefined;
+    await new Promise<void>((resolve) => server.listen(0, "127.0.0.1", resolve));
+    try {
+      const address = server.address();
+      if (address === null || typeof address === "string") throw new Error("unexpected address");
+      const base = `http://127.0.0.1:${address.port}`;
+      const getRes = await fetch(`${base}/meeting-room`);
+      expect(getRes.status).toBe(200);
+      const setCookie = getRes.headers.get("set-cookie") ?? getRes.headers.get("Set-Cookie");
+      if (!setCookie) throw new Error("missing set-cookie");
+      const cookieMatch = setCookie.match(/mr_store=[^;]+/);
+      if (!cookieMatch) throw new Error("missing mr_store cookie");
+      const cookie = cookieMatch[0];
+      key = cookie.split("=")[1]?.split(";")[0];
+      if (!key) throw new Error("missing key");
+      const html = await getRes.text();
+      const roomIdMatch = html.match(/data-room-id="([^"]+)"/);
+      if (!roomIdMatch) throw new Error("missing data-room-id");
+      roomId = roomIdMatch[1];
+      if (!roomId) throw new Error("missing data-room-id");
+      const st = await app.service.actAs(key, { roomId, action:"state" }, {host:new URL(base).host});
+      if(!st.body.snapshot) throw new Error("null snapshot");
+      const meetingId=st.body.snapshot.view.selectedMeetingId;
+      if(!meetingId) throw new Error("missing meetingId");
+      const event1 = { version: 1, meetingId, utteranceId: app.knownUid, sequence: 1, revision: 1, speaker: "Synthetic owner", text: "Contact alice@example.com" };
+      const event2 = { version: 1, meetingId, utteranceId: randomUUID(), sequence: 2, revision: 1, speaker: "Synthetic owner", text: "Contact alice@example.com" };
+      const ingest1Res = await fetch(`${base}/api/meeting-room/conversation`, { method: "POST", headers: { Cookie: cookie, "content-type": "application/json" }, body: JSON.stringify({ roomId, event: event1 }) });
+      expect(ingest1Res.status).toBe(200);
+      await ingest1Res.text();
+      expect(prepareSpy).toHaveBeenCalledTimes(0);
+      expect(app.callModel).toHaveBeenCalledTimes(0);
+      const ingest2Res = await fetch(`${base}/api/meeting-room/conversation`, { method: "POST", headers: { Cookie: cookie, "content-type": "application/json" }, body: JSON.stringify({ roomId, event: event2 }) });
+      expect(ingest2Res.status).toBe(200);
+      await ingest2Res.text();
+      expect(prepareSpy).toHaveBeenCalledTimes(0);
+      expect(app.callModel).toHaveBeenCalledTimes(0);
+      const foreignKey = randomUUID();
+      const foreignCookie = meetingRoomSetCookie(foreignKey, { host: "127.0.0.1" }).split(";")[0];
+      if (foreignCookie === undefined) throw new Error("meetingRoomSetCookie returned empty cookie");
+      const foreignFinishRes = await fetch(`${base}/api/meeting-room/conversation/finish`, { method: "POST", headers: { Cookie: foreignCookie, "content-type": "application/json" }, body: JSON.stringify({ roomId }) });
+      expect(foreignFinishRes.status).toBe(404);
+      await foreignFinishRes.text();
+      const foreignIngestRes = await fetch(`${base}/api/meeting-room/conversation`, { method: "POST", headers: { Cookie: foreignCookie, "content-type": "application/json" }, body: JSON.stringify({ roomId, event: event1 }) });
+      expect(foreignIngestRes.status).toBe(404);
+      await foreignIngestRes.text();
+      const [a, b] = await Promise.all([ fetch(`${base}/api/meeting-room/conversation/finish`, { method: "POST", headers: { Cookie: cookie, "content-type": "application/json" }, body: JSON.stringify({ roomId }) }), fetch(`${base}/api/meeting-room/conversation/finish`, { method: "POST", headers: { Cookie: cookie, "content-type": "application/json" }, body: JSON.stringify({ roomId }) }) ]);
+      const statuses = [a.status, b.status].sort((x, y) => x - y);
+      expect(statuses).toEqual([202, 409]);
+      await a.text();
+      await b.text();
+      expect(prepareSpy).toHaveBeenCalledTimes(1);
+      expect(app.callModel).toHaveBeenCalledTimes(0);
+      const badRes = await fetch(`${base}/api/meeting-room/conversation`, { method: "POST", headers: { Cookie: cookie, "content-type": "application/json" }, body: JSON.stringify({ roomId, event: event1, ownerId: "o1" }) });
+      expect(badRes.status).toBe(400);
+      await badRes.text();
+      expect(prepareSpy).toHaveBeenCalledTimes(1);
+    } finally {
+      if(key&&roomId) await app.service.actAs(key,{roomId,action:"takeover"},{host:"127.0.0.1"});
+      prepareSpy.mockRestore();
+      await new Promise<void>((resolve, reject) => server.close((e) => (e ? reject(e) : resolve())));
+    }
+  });
+});

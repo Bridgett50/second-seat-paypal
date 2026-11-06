@@ -1,0 +1,37 @@
+import { test, expect } from "vitest";
+import { randomUUID } from "node:crypto";
+import { createMeetingRoomService } from "../src/meetingRoom.js";
+
+test("worker binding rejects foreign browser and survives takeover ABA safely", async () => {
+  const svc = createMeetingRoomService({ env: { SECOND_SEAT_TEST_MODE: "1" }, conversationInput: true, candidateAutoDispatch: false, sessionPolicy: true });
+  const key = randomUUID();
+  const opened = svc.open("", { host: "127.0.0.1:4174" }, key);
+  const roomId = opened.roomId;
+  const snap = opened.view;
+  expect(snap.selectedMeetingId).toBeDefined();
+  expect(snap.meetings).toBeDefined();
+  const binding = svc.workerBindingAs(key, roomId);
+  expect(binding).not.toBeNull();
+  expect(binding!.ownerId).toBe(snap.ownerId);
+  expect(binding!.roomId).toBe(roomId);
+  expect(binding!.meetingId).toBe(snap.selectedMeetingId);
+  expect(binding!.epoch).toBe(0);
+  expect(Object.isFrozen(binding!)).toBe(true);
+  expect(svc.workerBindingAs(randomUUID(), roomId)).toBeNull();
+  expect(svc.workerBindingAs(key, randomUUID())).toBeNull();
+  const epoch0 = binding!.epoch;
+  const t1 = await svc.actAs(key, { roomId, action: "takeover" }, { host: "127.0.0.1:4174" });
+  expect(t1.status).toBe(200);
+  expect(svc.workerBindingAs(key, roomId)).toBeNull();
+  const r1 = await svc.actAs(key, { roomId, action: "resume" }, { host: "127.0.0.1:4174" });
+  expect(r1.status).toBe(200);
+  const b1 = svc.workerBindingAs(key, roomId);
+  expect(b1).not.toBeNull();
+  expect(b1!.epoch).toBeGreaterThan(epoch0);
+  const epoch1 = b1!.epoch;
+  await svc.actAs(key, { roomId, action: "takeover" }, { host: "127.0.0.1:4174" });
+  await svc.actAs(key, { roomId, action: "resume" }, { host: "127.0.0.1:4174" });
+  const b2 = svc.workerBindingAs(key, roomId);
+  expect(b2).not.toBeNull();
+  expect(b2!.epoch).toBeGreaterThan(epoch1);
+});

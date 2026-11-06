@@ -1,0 +1,101 @@
+{
+  "planned": [
+    "basic-01.txt",
+    "basic-02.txt",
+    "basic-03.txt",
+    "basic-04.txt",
+    "basic-05.txt",
+    "basic-06.txt",
+    "basic-07.txt",
+    "basic-08.txt"
+  ],
+  "request_completion": {
+    "completed": 6,
+    "planned": 8
+  },
+  "legacy_entity_disappearance": {
+    "completed": {
+      "k": 18,
+      "n": 29
+    },
+    "end_to_end": {
+      "k": 18,
+      "n": 39
+    },
+    "wilson95_completed": [
+      0.4400222620928496,
+      0.7731220426913266
+    ],
+    "wilson95_end_to_end": [
+      0.3156664723404835,
+      0.6143081317826118
+    ]
+  },
+  "recall": {
+    "k": 18,
+    "n": 29
+  },
+  "span_coverage": null,
+  "span_coverage_reason": "predictions not keyed to case files; not re-scorable",
+  "char_coverage": null,
+  "over_redaction_rate": null,
+  "keyed_predictions": 0,
+  "cases": [
+    {
+      "file": "basic-01.txt",
+      "hits": 5,
+      "total": 5,
+      "status": "ok"
+    },
+    {
+      "file": "basic-02.txt",
+      "hits": 5,
+      "total": 5,
+      "status": "ok"
+    },
+    {
+      "file": "basic-03.txt",
+      "hits": 0,
+      "total": 5,
+      "status": "error",
+      "error": "Unexpected token ',', ...\"{\"start\":n,\"end\":n,\"\"... is not valid JSON"
+    },
+    {
+      "file": "basic-04.txt",
+      "hits": 0,
+      "total": 5,
+      "status": "ok"
+    },
+    {
+      "file": "basic-05.txt",
+      "hits": 4,
+      "total": 5,
+      "status": "ok"
+    },
+    {
+      "file": "basic-06.txt",
+      "hits": 4,
+      "total": 4,
+      "status": "ok"
+    },
+    {
+      "file": "basic-07.txt",
+      "hits": 0,
+      "total": 5,
+      "status": "error",
+      "error": "glimmer: finish_reason=length (len=0)"
+    },
+    {
+      "file": "basic-08.txt",
+      "hits": 0,
+      "total": 5,
+      "status": "ok"
+    }
+  ],
+  "failures": [
+    "basic-03.txt: Unexpected token ',', ...\"{\"start\":n,\"end\":n,\"\"... is not valid JSON",
+    "basic-07.txt: glimmer: finish_reason=length (len=0)"
+  ],
+  "not_run": [],
+  "generatedAt": "2026-10-26T23:41:19.507Z"
+}

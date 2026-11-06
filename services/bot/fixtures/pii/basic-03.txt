@@ -1,0 +1,6 @@
+Sam: Thanks everyone for joining the standup.
+Jordan: Hi, I'm Jordan Lee, you can reach me at (555) 013-4401.
+Priya: Noted. Should I send the notes to jordan.lee@example.com?
+Jordan: Yes please. Also updating my payment method to 5555 5555 5555 4444.
+Sam: Got it. And the reference account 99123456 stays the same?
+Jordan: Correct, bill it there and ship the swag to 88 Birch Lane.

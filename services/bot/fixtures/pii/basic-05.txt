@@ -1,0 +1,7 @@
+Morgan: Hi team, Morgan Patel joining from the airport.
+Lee: Hey Morgan, what's your mobile?
+Morgan: It's +1 (555) 015-3390, but email morgan.patel@example.com works better.
+Lee: Noted. Finance asked to confirm card 5555555555554444.
+Morgan: Confirmed. Refunds can go to GB29NWBK60161331926819.
+Lee: And payroll account 66123456 is still active?
+Morgan: Yes, keep using that one.

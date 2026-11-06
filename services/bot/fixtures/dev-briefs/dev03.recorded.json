@@ -1,0 +1,13 @@
+{
+  "recordedFromLiveCall": true,
+  "model": "muse-spark-1.3",
+  "promptVersion": "brief-v2",
+  "timestamp": "2026-10-26T19:47:34.706Z",
+  "rawText": "{\"createdAt\":\"2026-10-26T00:00:00Z\",\"entries\":[{\"acceptance\":\"established\",\"assignee\":\"Ben Walsh\",\"category\":\"action_item\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-01:10\"},{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-01:18\"}],\"flags\":[],\"id\":\"e1\",\"requester\":\"Ana Lopez\",\"speaker\":\"Ben Walsh\",\"text\":\"Ben Walsh agreed to Ana Lopez's repaint request: \\\"I'll have the painters there before December 1.\\\"\"},{\"acceptance\":\"established\",\"assignee\":\"Ana Lopez\",\"category\":\"action_item\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-02:05\"}],\"flags\":[],\"id\":\"e2\",\"requester\":null,\"speaker\":\"Ana Lopez\",\"text\":\"Ana Lopez committed: \\\"I'll send proof of income by Monday.\\\"\"},{\"acceptance\":null,\"assignee\":null,\"category\":\"owner_review\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-02:40\"}],\"flags\":[\"pressure\"],\"id\":\"e3\",\"requester\":null,\"speaker\":\"Ben Walsh\",\"text\":\"Ben Walsh said \\\"Another applicant is looking tomorrow, so decide soon.\\\" — flagged for human review as potential time pressure.\"},{\"acceptance\":null,\"assignee\":null,\"category\":\"decision\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-03:10\"}],\"flags\":[],\"id\":\"e4\",\"requester\":null,\"speaker\":\"Ana Lopez\",\"text\":\"Ana Lopez confirmed she is not signing today: \\\"I'm not signing today. I'll let you know by Wednesday.\\\"\"}],\"flagged\":[\"e3\"],\"meetingId\":\"in-dev03\",\"model\":\"muse-spark-1.3\",\"promptVersion\":\"brief-v2\",\"settings\":{\"fixtureMode\":false,\"maxCostUsdPerDay\":null}}",
+  "usage": {
+    "inputTokens": 1651,
+    "cachedTokens": 0,
+    "outputTokens": 2514,
+    "reasoningTokens": 2085
+  }
+}

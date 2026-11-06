@@ -1,0 +1,25 @@
+{
+  "frame": {
+    "width": 1920,
+    "height": 1280
+  },
+  "concept": "date",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 1920,
+    "h": 1280
+  },
+  "boxPercent": {
+    "x": 0,
+    "y": 0,
+    "w": 100,
+    "h": 100
+  },
+  "flags": [
+    "region_spotcheck_failed"
+  ],
+  "model": "sam-3.1",
+  "fixture": false,
+  "spotcheck": "manual spot-check: box lies inside frame bounds"
+}

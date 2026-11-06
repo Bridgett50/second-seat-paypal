@@ -1,0 +1,1 @@
+SYNTHETIC vendor slide for a software demo test fixture. A plain conference-room slide with the headline "Vendor proposal", a bullet "Delivery: March 30th", and a large visible label "SYNTHETIC — model-generated test image". Flat vector style, no people, no logos.

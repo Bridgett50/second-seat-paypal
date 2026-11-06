@@ -1,0 +1,9 @@
+{
+  "health_status": 200,
+  "seconds_to_healthy": 170.058015859,
+  "vllm_returncode": null,
+  "eval_stdout": "redactor: Glimmer: meta-models/Muse-Glimmer-30B\nrecall: 10/10 = 1.000\nspans returned: 12 (expected entities: 10)\nmisses: none\n",
+  "eval_stderr": "",
+  "eval_returncode": 0,
+  "ran_at": "2026-10-26T19:31:49.304955+00:00"
+}

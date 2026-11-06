@@ -1,0 +1,14 @@
+{
+  "model": "muse-spark-1.3",
+  "fixture": false,
+  "date": "March 30th",
+  "rawText": "{\"date\": \"March 30th\"}",
+  "usage": {
+    "inputTokens": 3247,
+    "outputTokens": 196
+  },
+  "creativeBuild": true,
+  "masked": false,
+  "maskLabel": "Glimmer: MOCK (TODO(glimmer-hosting))",
+  "ms": 11899
+}

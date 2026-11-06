@@ -1,0 +1,13 @@
+{
+  "recordedFromLiveCall": true,
+  "model": "muse-spark-1.3",
+  "promptVersion": "brief-v2",
+  "timestamp": "2026-10-26T19:47:15.459Z",
+  "rawText": "{\"createdAt\":\"2026-10-26T12:00:00Z\",\"entries\":[{\"acceptance\":null,\"assignee\":null,\"category\":\"decision\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-03:30\"},{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-00:30\"}],\"flags\":[],\"id\":\"e1\",\"requester\":null,\"speaker\":\"Lena Fischer\",\"text\":\"So we're going with buffet, 140 guests, pending the headcount.\"},{\"acceptance\":\"established\",\"assignee\":\"Tomas Novak\",\"category\":\"action_item\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-01:15\"},{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-01:05\"}],\"flags\":[],\"id\":\"e2\",\"requester\":\"Lena Fischer\",\"speaker\":\"Tomas Novak\",\"text\":\"Tomas Novak agreed: \\\"I'll send the final headcount by November 10\\\" - final headcount due November 10.\"},{\"acceptance\":\"not_established\",\"assignee\":\"Lena Fischer\",\"category\":\"owner_review\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-02:40\"},{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-02:48\"}],\"flags\":[\"request_not_accepted\"],\"id\":\"e3\",\"requester\":\"Tomas Novak\",\"speaker\":\"Lena Fischer\",\"text\":\"Tomas Novak asked \\\"Can you add a vegan option?\\\" Lena Fischer replied \\\"Probably, I need to check with my chef first\\\" - not accepted, needs chef check.\"}],\"flagged\":[\"e3\"],\"meetingId\":\"in-dev01\",\"model\":\"muse-spark-1.3\",\"promptVersion\":\"brief-v2\",\"settings\":{\"fixtureMode\":false,\"maxCostUsdPerDay\":null}}",
+  "usage": {
+    "inputTokens": 1681,
+    "cachedTokens": 0,
+    "outputTokens": 3109,
+    "reasoningTokens": 2691
+  }
+}

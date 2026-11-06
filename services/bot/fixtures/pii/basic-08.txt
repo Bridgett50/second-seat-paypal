@@ -1,0 +1,7 @@
+Avery: Hello all, Avery Singh here.
+Kim: Hi Avery, best contact number?
+Avery: Use +1-555-018-1122 during work hours.
+Kim: Shall I send the contract to avery.singh@example.com?
+Avery: Please do. The retainer card is 4111 1111 1111 1111.
+Kim: Logged. And the client account 44123456 covers it?
+Avery: Yes, and mail the hard copy to 57 Willow Creek Road.

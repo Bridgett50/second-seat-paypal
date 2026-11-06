@@ -1,0 +1,24 @@
+{
+  "holdout": "holdout-v1",
+  "created": "2026-10-27",
+  "inference_runs": 0,
+  "review": {
+    "status": "pending-manual-review",
+    "reviewer": null,
+    "reviewed_at": null,
+    "notes": "Gold annotations await manual review; no model has seen this holdout."
+  },
+  "files": {
+    "cases.json": "d57bf720215f153ab1a0dc8f88a7361a2b46842d253fca5a67477d78c47e85f5",
+    "holdout-01.txt": "c937b23b95162beae628a8d0b49e01bb8c029135907d38c91320b2f2a8bc057a",
+    "holdout-02.txt": "d36b0b5caadd31db371567af936872c8ca060cf63793ab6c1e9572d4d3936744",
+    "holdout-03.txt": "d6f3c00b583d0ea1606aaa1c07a68c2aba12acf6b5885290484b9da55e02d69f",
+    "holdout-04.txt": "d54c7ab421f26c72fdb5ab5c988d31103dd8364df6df56500a78400affb29b5b",
+    "holdout-05.txt": "b09cb7125682d23ead816c8ce99905e5b610bc4370ae4579144fdaa0f0b72eda",
+    "holdout-06.txt": "ba00eacc256d4b568027d50d8505b721cc04416abfe0a87bd9e447657822f13c",
+    "holdout-07.txt": "02b756ea79ad52bae8b3e6ee695e6234b2d74209e2b846082065379046f33f2a",
+    "holdout-08.txt": "60dfd0533a7b4c3af6e20db4e930969a320e03705dca4c74467cba0f2b2dbd55",
+    "holdout-09.txt": "a6777550b9993052bf8e8306bab4d72fd1c99a7a248c0e64b1b28c2529085f0c",
+    "holdout-10.txt": "6c7b2b70e0e339420fd98cbe83c0cfb7509354ec16810382d3b1b829fad2a805"
+  }
+}

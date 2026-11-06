@@ -1,0 +1,28 @@
+{
+  "name": "@second-seat/bot",
+  "version": "0.1.0",
+  "description": "Second Seat bot service stub. Model clients stay behind interfaces; fixture mode is the default.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "brief:run": "tsc -p tsconfig.json && node dist/src/brief/cli.js",
+    "support:run": "tsc -p tsconfig.json && node scripts/run-support-fixtures.mjs",
+    "shield:run": "tsc -p tsconfig.json && node dist/src/shield/run.js",
+    "redaction:eval": "node scripts/redaction-eval.mjs",
+    "pretypecheck": "pnpm --filter @second-seat/core build",
+    "pretest": "pnpm --filter @second-seat/core build && tsc -p tsconfig.json",
+    "preredaction:eval": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@meta-sam/parser": "0.1.0",
+    "@second-seat/core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3",
+    "vitest": "2.1.8"
+  }
+}

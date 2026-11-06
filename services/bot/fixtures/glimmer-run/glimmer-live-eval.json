@@ -1,0 +1,8 @@
+{
+  "health": 200,
+  "seconds_to_healthy": 165.068868066,
+  "eval_returncode": 1,
+  "eval_stdout": "redactor: Glimmer: meta-models/Muse-Glimmer-30B\nrecall: 18/29 = 0.621\nwilson95: [0.440, 0.773]\ncase basic-01.txt: 5/5\ncase basic-02.txt: 5/5\ncase basic-03.txt: error Unexpected token ',', ...\"{\"start\":n,\"end\":n,\"\"... is not valid JSON\ncase basic-04.txt: 0/5\ncase basic-05.txt: 4/5\ncase basic-06.txt: 4/4\ncase basic-07.txt: error glimmer: finish_reason=length (len=0)\ncase basic-08.txt: 0/5\ncompleted: 6/8\nexecution_failures: 2\n - basic-03.txt: Unexpected token ',', ...\"{\"start\":n,\"end\":n,\"\"... is not valid JSON\n - basic-07.txt: glimmer: finish_reason=length (len=0)\nnot_run: 0\nmisses: none\nsummary: /results/eval-summary.json\n",
+  "eval_stderr": "",
+  "ran_at": "2026-10-26T21:27:46.434146+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "syntheticFixture": true,
+  "note": "SYNTHETIC test doubles for offline runs (made up; never model output, never present as such). Recorded grades the support judge is expected to return per case in eval/fixtures/support-cases.json. The advisory overlap is computed live from the input, not stored here.",
+  "model": "synthetic-support-judge-v1",
+  "promptVersion": "support-v1",
+  "verdicts": {
+    "F1-overreach": { "grade": "unsupported", "missingQualifier": null },
+    "F2-paraphrase-drift": { "grade": "partial", "missingQualifier": null },
+    "F3-dropped-qualifier": { "grade": "partial", "missingQualifier": "plus tax and freight" },
+    "F4-confidence-laundering": { "grade": "partial", "missingQualifier": "projected" },
+    "M1-wrong-date": { "grade": "unsupported", "missingQualifier": null },
+    "M2-wrong-owner": { "grade": "unsupported", "missingQualifier": null },
+    "M3-dropped-qualifier": { "grade": "partial", "missingQualifier": "if QA passes" },
+    "M4-invented-decision": { "grade": "unsupported", "missingQualifier": null },
+    "M5-hedge-to-certainty": { "grade": "partial", "missingQualifier": null },
+    "C1-control-H-A1": { "grade": "supported", "missingQualifier": null },
+    "C2-control-H-Q1": { "grade": "supported", "missingQualifier": null },
+    "C3-control-D2-D1": { "grade": "supported", "missingQualifier": null },
+    "C4-control-H-U1": { "grade": "supported", "missingQualifier": null }
+  }
+}

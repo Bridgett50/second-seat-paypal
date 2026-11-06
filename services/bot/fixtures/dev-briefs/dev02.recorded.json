@@ -1,0 +1,13 @@
+{
+  "recordedFromLiveCall": true,
+  "model": "muse-spark-1.3",
+  "promptVersion": "brief-v2",
+  "timestamp": "2026-10-26T19:47:24.357Z",
+  "rawText": "{\"createdAt\":\"2026-10-26T00:00:00Z\",\"entries\":[{\"acceptance\":null,\"assignee\":null,\"category\":\"decision\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-00:45\"},{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-00:52\"}],\"flags\":[],\"id\":\"e1\",\"requester\":null,\"speaker\":\"Raj Patel\",\"text\":\"Ship version 2.4 on Thursday November 5, assuming QA signs off - 'Let's ship version 2.4 on Thursday November 5, assuming QA signs off' with 'Agreed, Thursday if QA passes.'\"},{\"acceptance\":\"not_established\",\"assignee\":\"Owen Brooks\",\"category\":\"owner_review\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-01:30\"},{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-01:36\"}],\"flags\":[\"request_not_accepted\"],\"id\":\"e2\",\"requester\":\"Raj Patel\",\"speaker\":\"Owen Brooks\",\"text\":\"Raj asked Owen to 'finish the QA pass by Wednesday' and Owen replied 'I can do most of it by Wednesday, the PDF tests might slip' - full QA pass by Wednesday not confirmed.\"},{\"acceptance\":\"established\",\"assignee\":\"Mia Chen\",\"category\":\"action_item\",\"citations\":[{\"frameId\":null,\"kind\":\"segment\",\"region\":null,\"segmentId\":\"t-02:20\"}],\"flags\":[],\"id\":\"e3\",\"requester\":null,\"speaker\":\"Mia Chen\",\"text\":\"Mia Chen: \\\"I'll write the release notes by Tuesday.\\\"\"}],\"flagged\":[\"e2\"],\"meetingId\":\"in-dev02\",\"model\":\"muse-spark-1.3\",\"promptVersion\":\"brief-v2\",\"settings\":{\"fixtureMode\":false,\"maxCostUsdPerDay\":null}}",
+  "usage": {
+    "inputTokens": 1681,
+    "cachedTokens": 0,
+    "outputTokens": 2237,
+    "reasoningTokens": 1823
+  }
+}

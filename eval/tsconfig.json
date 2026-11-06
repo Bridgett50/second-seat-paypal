@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "allowJs": true
+  },
+  "include": ["check-hashes.mjs", "test", "truth/*.json"]
+}

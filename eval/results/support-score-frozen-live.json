@@ -1,0 +1,164 @@
+{
+  "mode": "judge",
+  "catch": {
+    "k": 9,
+    "n": 9,
+    "ci": {
+      "lo": 0.701,
+      "hi": 1
+    }
+  },
+  "falseAlarm": {
+    "k": 0,
+    "n": 4,
+    "ci": {
+      "lo": 0,
+      "hi": 0.49
+    }
+  },
+  "rows": [
+    {
+      "id": "F1-overreach",
+      "kind": "fixture",
+      "mutation": null,
+      "expected": "unsupported",
+      "grade": "unsupported",
+      "missingQualifier": null,
+      "overlap": 0.444,
+      "flagged": true,
+      "exact": true
+    },
+    {
+      "id": "F2-paraphrase-drift",
+      "kind": "fixture",
+      "mutation": null,
+      "expected": "partial",
+      "grade": "partial",
+      "missingQualifier": "We'll try to",
+      "overlap": 0.625,
+      "flagged": true,
+      "exact": true
+    },
+    {
+      "id": "F3-dropped-qualifier",
+      "kind": "fixture",
+      "mutation": null,
+      "expected": "partial",
+      "grade": "partial",
+      "missingQualifier": "plus tax and freight, freight quoted separately",
+      "overlap": 0.833,
+      "flagged": true,
+      "exact": true
+    },
+    {
+      "id": "F4-confidence-laundering",
+      "kind": "fixture",
+      "mutation": null,
+      "expected": "partial",
+      "grade": "unsupported",
+      "missingQualifier": null,
+      "overlap": 1,
+      "flagged": true,
+      "exact": false
+    },
+    {
+      "id": "M1-wrong-date",
+      "kind": "mutant",
+      "mutation": "M1",
+      "expected": "unsupported",
+      "grade": "unsupported",
+      "missingQualifier": null,
+      "overlap": 0.667,
+      "flagged": true,
+      "exact": true
+    },
+    {
+      "id": "M2-wrong-owner",
+      "kind": "mutant",
+      "mutation": "M2",
+      "expected": "unsupported",
+      "grade": "unsupported",
+      "missingQualifier": null,
+      "overlap": 0.4,
+      "flagged": true,
+      "exact": true
+    },
+    {
+      "id": "M3-dropped-qualifier",
+      "kind": "mutant",
+      "mutation": "M3",
+      "expected": "partial",
+      "grade": "partial",
+      "missingQualifier": "conditional on QA sign-off",
+      "overlap": 1,
+      "flagged": true,
+      "exact": false
+    },
+    {
+      "id": "M4-invented-decision",
+      "kind": "mutant",
+      "mutation": "M4",
+      "expected": "unsupported",
+      "grade": "unsupported",
+      "missingQualifier": null,
+      "overlap": 0.5,
+      "flagged": true,
+      "exact": true
+    },
+    {
+      "id": "M5-hedge-to-certainty",
+      "kind": "mutant",
+      "mutation": "M5",
+      "expected": "partial",
+      "grade": "partial",
+      "missingQualifier": "expect it in about a week",
+      "overlap": 0.545,
+      "flagged": true,
+      "exact": true
+    },
+    {
+      "id": "C1-control-H-A1",
+      "kind": "control",
+      "mutation": null,
+      "expected": "supported",
+      "grade": "supported",
+      "missingQualifier": null,
+      "overlap": 0.846,
+      "flagged": false,
+      "exact": true
+    },
+    {
+      "id": "C2-control-H-Q1",
+      "kind": "control",
+      "mutation": null,
+      "expected": "supported",
+      "grade": "supported",
+      "missingQualifier": null,
+      "overlap": 0.917,
+      "flagged": false,
+      "exact": true
+    },
+    {
+      "id": "C3-control-D2-D1",
+      "kind": "control",
+      "mutation": null,
+      "expected": "supported",
+      "grade": "supported",
+      "missingQualifier": null,
+      "overlap": 1,
+      "flagged": false,
+      "exact": true
+    },
+    {
+      "id": "C4-control-H-U1",
+      "kind": "control",
+      "mutation": null,
+      "expected": "supported",
+      "grade": "supported",
+      "missingQualifier": null,
+      "overlap": 0.688,
+      "flagged": false,
+      "exact": true
+    }
+  ]
+}

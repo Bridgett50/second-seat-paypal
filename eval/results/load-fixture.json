@@ -1,0 +1,20 @@
+{
+  "label": "fixture mode, not production",
+  "mode": "fixture",
+  "serverMode": "dist-server",
+  "httpGets": {
+    "n": 500,
+    "concurrency": 20,
+    "failed": 0,
+    "p50Ms": 106.6,
+    "p90Ms": 116.3,
+    "maxMs": 1245
+  },
+  "briefCli": {
+    "n": 20,
+    "failed": 0,
+    "p50Ms": 1.4,
+    "p90Ms": 4.2,
+    "maxMs": 8.9
+  }
+}

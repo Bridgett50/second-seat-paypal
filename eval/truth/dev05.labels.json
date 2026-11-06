@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "truth-draft-0.1",
+  "meetingId": "synthetic-dev05-indirect-refusal",
+  "synthetic": true,
+  "status": "DRAFT - not sealed, not hashed",
+  "entries": [
+    {
+      "id": "D5-D1",
+      "category": "decision",
+      "text": "Catalog delivery set for November 13 (the 6th was not accepted).",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-01:20"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-01:28"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-02:00"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": "2026-11-13",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D5-A1",
+      "category": "action_item",
+      "text": "Elif Demir approves the proof.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:00"
+        }
+      ],
+      "flags": [],
+      "assignee": "Elif Demir",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "relative: tomorrow",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D5-A2",
+      "category": "action_item",
+      "text": "Kofi Mensah sends the invoice after proof approval.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:30"
+        }
+      ],
+      "flags": [],
+      "assignee": "Kofi Mensah",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "after proof approved",
+        "qualifiers_required": [
+          "once the proof is approved"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D5-U1",
+      "category": "owner_review",
+      "text": "Request for November 6 delivery was not accepted (indirect refusal).",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-00:30"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-00:41"
+        }
+      ],
+      "flags": [
+        "request_not_accepted"
+      ],
+      "acceptance": "not_established",
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D5-N1",
+      "category": "action_item",
+      "text": "Lakeside Print agreed to deliver by November 6.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-00:41"
+        }
+      ],
+      "flags": [],
+      "assignee": "Kofi Mensah",
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "unsupported",
+        "note": "Indirect refusal read as yes."
+      }
+    }
+  ]
+}

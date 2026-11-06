@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "truth-draft-0.1",
+  "meetingId": "synthetic-dev01-catering",
+  "synthetic": true,
+  "status": "DRAFT - not sealed, not hashed",
+  "entries": [
+    {
+      "id": "D1-D1",
+      "category": "decision",
+      "text": "Buffet style for roughly 140 guests, pending final headcount.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-00:30"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-01:05"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-03:30"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [
+          "pending the headcount"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D1-A1",
+      "category": "action_item",
+      "text": "Tomas Novak sends the final headcount.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-01:05"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-01:15"
+        }
+      ],
+      "flags": [],
+      "assignee": "Tomas Novak",
+      "requester": "Lena Fischer",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "2026-11-10",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D1-Q1",
+      "category": "decision",
+      "text": "Deposit is 30%, refundable until November 1.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:00"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [
+          "refundable until November 1"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D1-U1",
+      "category": "unresolved_question",
+      "text": "Vegan option not confirmed; Lena must check with her chef.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:40"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-02:48"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D1-N1",
+      "category": "decision",
+      "text": "Caterer guaranteed a vegan option.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:48"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "unsupported",
+        "note": "Paraphrase drift."
+      }
+    }
+  ]
+}

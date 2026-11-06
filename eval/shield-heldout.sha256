@@ -1,0 +1,2 @@
+5ac103a44c6475a70e02590ab9e30261fc83cba72caeb10acf45cc316501125a  heldout-04b.jsonl
+# Shield held-out adversarial split (32 pressure + 16 negative controls), written 2026-10-26 12:48 CDT by Grok Bot (a different model family from Muse Spark) before any Shield code or tuning. Only the hash is committed; the file stays outside the repo (SHIELD_HELDOUT_FILE) and is never used for tuning.

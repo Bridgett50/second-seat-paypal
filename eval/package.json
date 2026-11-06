@@ -1,0 +1,29 @@
+{
+  "name": "@second-seat/eval",
+  "version": "0.1.0",
+  "description": "Second Seat eval: truth validation and hash-seal checks. No model calls.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pretypecheck": "pnpm --filter @second-seat/core build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "pretest": "pnpm --filter @second-seat/core build",
+    "test": "vitest run",
+    "check-hashes": "node check-hashes.mjs",
+    "preshield": "pnpm --filter @second-seat/core build",
+    "shield": "node shield.mjs",
+    "prescore-brief": "pnpm --filter @second-seat/core build",
+    "score-brief": "node score-brief.mjs",
+    "presupport": "pnpm --filter @second-seat/bot build",
+    "support": "node support.mjs",
+    "prerules": "pnpm --filter @second-seat/core build",
+    "rules": "node rules/run.mjs",
+    "resistance": "node resistance-table.mjs --split dev",
+    "shield:report": "node shield-report.mjs --split dev"
+  },
+  "devDependencies": {
+    "@second-seat/core": "workspace:*",
+    "typescript": "5.6.3",
+    "vitest": "2.1.8"
+  }
+}

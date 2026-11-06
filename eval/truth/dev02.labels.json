@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "truth-draft-0.1",
+  "meetingId": "synthetic-dev02-software",
+  "synthetic": true,
+  "status": "DRAFT - not sealed, not hashed",
+  "entries": [
+    {
+      "id": "D2-D1",
+      "category": "decision",
+      "text": "Ship v2.4 on Thursday, November 5, conditional on QA sign-off.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-00:45"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-00:52"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": "2026-11-05",
+        "qualifiers_required": [
+          "if QA passes"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D2-A1",
+      "category": "action_item",
+      "text": "Owen Brooks completes most of the QA pass by Wednesday; PDF tests may slip.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-01:30"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-01:36"
+        }
+      ],
+      "flags": [],
+      "assignee": "Owen Brooks",
+      "requester": "Raj Patel",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "2026-11-04 (partial; PDF tests may slip)",
+        "qualifiers_required": [
+          "most of it",
+          "PDF tests might slip"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D2-A2",
+      "category": "action_item",
+      "text": "Mia Chen writes the release notes.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:20"
+        }
+      ],
+      "flags": [],
+      "assignee": "Mia Chen",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "2026-11-03",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D2-Q1",
+      "category": "owner_review",
+      "text": "Churn impact of about 2% is a projection, not a measured result.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-03:00"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [
+          "projected"
+        ],
+        "expected_support": "supported",
+        "note": "Confidence laundering (#25)."
+      }
+    },
+    {
+      "id": "D2-N1",
+      "category": "decision",
+      "text": "Release ships November 5 regardless of QA.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-00:45"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "unsupported"
+      }
+    }
+  ]
+}

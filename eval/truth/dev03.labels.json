@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "truth-draft-0.1",
+  "meetingId": "synthetic-dev03-lease",
+  "synthetic": true,
+  "status": "DRAFT - not sealed, not hashed",
+  "entries": [
+    {
+      "id": "D3-Q1",
+      "category": "decision",
+      "text": "Rent quoted at $2,100/month, utilities not included.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-00:22"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [
+          "utilities not included"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D3-A1",
+      "category": "action_item",
+      "text": "Ben Walsh has the unit repainted before move-in.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-01:10"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-01:18"
+        }
+      ],
+      "flags": [],
+      "assignee": "Ben Walsh",
+      "requester": "Ana Lopez",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "before 2026-12-01",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D3-A2",
+      "category": "action_item",
+      "text": "Ana Lopez sends proof of income.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:05"
+        }
+      ],
+      "flags": [],
+      "assignee": "Ana Lopez",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "2026-11-02 (Monday)",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D3-A3",
+      "category": "action_item",
+      "text": "Ana Lopez tells Ben her decision on the lease.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-03:10"
+        }
+      ],
+      "flags": [],
+      "assignee": "Ana Lopez",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "2026-11-04 (Wednesday)",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D3-R1",
+      "category": "owner_review",
+      "text": "Pressure: another applicant viewing tomorrow (Scarcity).",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:40"
+        }
+      ],
+      "flags": [
+        "commitment_language"
+      ],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D3-N1",
+      "category": "decision",
+      "text": "Ana agreed to sign the lease.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-03:10"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "unsupported"
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": "truth-draft-0.1",
+  "meetingId": "synthetic-hero-brightline",
+  "synthetic": true,
+  "status": "DRAFT - not sealed, not hashed",
+  "entries": [
+    {
+      "id": "H-D1",
+      "category": "decision",
+      "text": "Okafor Bakehouse will use the 8-inch kraft box, not the 10-inch.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-03:40"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-03:48"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "H-A1",
+      "category": "action_item",
+      "text": "Priya Shah sends Marco Reyes the final artwork files.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-04:41"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-04:47"
+        }
+      ],
+      "flags": [],
+      "assignee": "Priya Shah",
+      "requester": "Dana Okafor",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "2026-10-30",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "H-A2",
+      "category": "action_item",
+      "text": "Dana Okafor emails the loading-dock address to Marco Reyes.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-05:31"
+        }
+      ],
+      "flags": [],
+      "assignee": "Dana Okafor",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "relative: tomorrow (day after meeting)",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "H-A3",
+      "category": "action_item",
+      "text": "Marco Reyes to send the freight quote in writing; he said Brightline will TRY for early next week (not a commitment).",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-06:50"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-06:58"
+        }
+      ],
+      "flags": [],
+      "assignee": "Marco Reyes",
+      "requester": "Dana Okafor",
+      "acceptance": "not_established",
+      "truth": {
+        "due_date": "early next week (soft, 'we'll try')",
+        "qualifiers_required": [
+          "we'll try"
+        ],
+        "expected_support": "supported",
+        "note": "Paraphrase-drift trap (#22): 'guaranteed' or a firm date = partial/unsupported."
+      }
+    },
+    {
+      "id": "H-A4",
+      "category": "action_item",
+      "text": "Marco Reyes ships a printed sample box; expected in about a week.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-10:02"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-10:10"
+        }
+      ],
+      "flags": [],
+      "assignee": "Marco Reyes",
+      "requester": "Dana Okafor",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "about one week (approximate)",
+        "qualifiers_required": [
+          "about"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "H-U1",
+      "category": "unresolved_question",
+      "text": "No backup plan if November 30 delivery slips; Marco would have to check with the plant.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-08:15"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-08:26"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-08:40"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "H-U2",
+      "category": "unresolved_question",
+      "text": "Whether to sign the contract: Dana will discuss with Priya and respond in writing. No date confirmed by Okafor Bakehouse.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-11:30"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-13:20"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "H-C1",
+      "category": "source_conflict",
+      "text": "Delivery date conflict: slide and earlier speech say November 30; vendor later claims the 15th was 'already confirmed'.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-01:32"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-01:40"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-12:41"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-12:55"
+        }
+      ],
+      "flags": [
+        "conflicting_sources"
+      ],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "H-R1",
+      "category": "owner_review",
+      "text": "Pressure: vendor demands a yes before 5 today or the price doubles, citing only two slots left, and asserts a prior confirmation that did not happen (Scarcity + Commitment).",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-12:41"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-13:02"
+        }
+      ],
+      "flags": [
+        "commitment_language"
+      ],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "supported",
+        "note": "Stopped-before-the-yes moment. Any outgoing 'yes' must be HELD."
+      }
+    },
+    {
+      "id": "H-Q1",
+      "category": "decision",
+      "text": "Price is 41 cents per unit PLUS tax and freight (freight quoted separately).",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:15"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-02:22"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [
+          "plus tax and freight"
+        ],
+        "expected_support": "supported",
+        "note": "Omission trap (#23): dropping the qualifier = partial + missing_qualifier."
+      }
+    },
+    {
+      "id": "H-N1",
+      "category": "decision",
+      "text": "Okafor Bakehouse agreed to delivery on the 15th.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-12:41"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "unsupported",
+        "note": "Invented decision / overreach (#10). Dana explicitly says she confirmed no date [13:20]."
+      }
+    },
+    {
+      "id": "H-N2",
+      "category": "decision",
+      "text": "Team agreed to switch to Brightline's 10-inch box.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-03:40"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "unsupported",
+        "note": "Contradicts cited span."
+      }
+    }
+  ],
+  "frames": [
+    {
+      "id": "f-01:10",
+      "t": 70,
+      "file": "frame-01-10.png",
+      "content": "Proposal slide: 12,000 units, 8-inch kraft box, 2-color print, $0.41/unit (plus tax & freight), Delivery: Nov 30 (standard production)"
+    }
+  ]
+}

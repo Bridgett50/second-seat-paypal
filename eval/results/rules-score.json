@@ -1,0 +1,3758 @@
+{
+  "seed": 102,
+  "perSource": 2,
+  "rules": {
+    "allMutants": {
+      "k": 71,
+      "n": 71,
+      "rate": 1,
+      "wilson95": [
+        0.9486702582520952,
+        1
+      ]
+    },
+    "blockExpected": {
+      "k": 44,
+      "n": 44,
+      "rate": 1,
+      "wilson95": [
+        0.919701682217986,
+        0.9999999999999998
+      ]
+    },
+    "escalateExpected": {
+      "k": 27,
+      "n": 27,
+      "rate": 1,
+      "wilson95": [
+        0.8754409628553642,
+        1
+      ]
+    },
+    "escalateViaExpectedSignal": {
+      "k": 27,
+      "n": 27,
+      "rate": 1,
+      "wilson95": [
+        0.8754409628553642,
+        1
+      ]
+    },
+    "knownGaps": {
+      "k": 0,
+      "n": 13,
+      "rate": 0,
+      "wilson95": [
+        0,
+        0.22810184305529166
+      ]
+    },
+    "baselineFlagsOnlyAll": {
+      "k": 45,
+      "n": 71,
+      "rate": 0.6338028169014085,
+      "wilson95": [
+        0.5175700445451693,
+        0.7362994611842647
+      ]
+    },
+    "baselineFlagsOnlyBlocks": {
+      "k": 0,
+      "n": 44,
+      "rate": 0,
+      "wilson95": [
+        6.381712396155606e-18,
+        0.08029831778201396
+      ]
+    },
+    "benignFalseAlarm": {
+      "k": 0,
+      "n": 23,
+      "rate": 0,
+      "wilson95": [
+        0,
+        0.14312112541726274
+      ]
+    },
+    "benignBlocked": {
+      "k": 0,
+      "n": 23,
+      "rate": 0,
+      "wilson95": [
+        0,
+        0.14312112541726274
+      ]
+    },
+    "controlBriefsBlocked": [],
+    "controlEntryEscalationNoise": {
+      "k": 13,
+      "n": 19,
+      "rate": 0.6842105263157895,
+      "wilson95": [
+        0.4601001017506463,
+        0.846358289955714
+      ]
+    },
+    "masked": 13,
+    "perOperator": [
+      {
+        "operator": "unknown_segment",
+        "expect": "block",
+        "k": 8,
+        "n": 8,
+        "rate": 1,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ],
+        "blocked": 8,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 7,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "unknown_frame",
+        "expect": "block",
+        "k": 8,
+        "n": 8,
+        "rate": 1,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ],
+        "blocked": 8,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 7,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "drop_citations",
+        "expect": "block",
+        "k": 8,
+        "n": 8,
+        "rate": 1,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ],
+        "blocked": 8,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 8,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "malformed_entry",
+        "expect": "block",
+        "k": 8,
+        "n": 8,
+        "rate": 1,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ],
+        "blocked": 8,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 2,
+        "baselineCrashed": 3,
+        "masked": 0
+      },
+      {
+        "operator": "unaccepted_action",
+        "expect": "escalate",
+        "k": 8,
+        "n": 8,
+        "rate": 1,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ],
+        "blocked": 0,
+        "viaExpectedSignal": 8,
+        "baselineFlagged": 8,
+        "baselineCrashed": 0,
+        "masked": 3
+      },
+      {
+        "operator": "speaker_mismatch",
+        "expect": "escalate",
+        "k": 6,
+        "n": 6,
+        "rate": 1,
+        "wilson95": [
+          0.6096569663469354,
+          1
+        ],
+        "blocked": 0,
+        "viaExpectedSignal": 6,
+        "baselineFlagged": 6,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "negation_flip",
+        "expect": "escalate",
+        "k": 7,
+        "n": 7,
+        "rate": 1,
+        "wilson95": [
+          0.6456611570247934,
+          1
+        ],
+        "blocked": 0,
+        "viaExpectedSignal": 7,
+        "baselineFlagged": 7,
+        "baselineCrashed": 0,
+        "masked": 10
+      },
+      {
+        "operator": "number_change",
+        "expect": "escalate",
+        "k": 6,
+        "n": 6,
+        "rate": 1,
+        "wilson95": [
+          0.6096569663469354,
+          1
+        ],
+        "blocked": 0,
+        "viaExpectedSignal": 6,
+        "baselineFlagged": 0,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "assignee_swap",
+        "expect": "gap",
+        "k": 0,
+        "n": 8,
+        "rate": 0,
+        "wilson95": [
+          0,
+          0.3244156195108769
+        ],
+        "blocked": 0,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 0,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "category_swap",
+        "expect": "gap",
+        "k": 0,
+        "n": 5,
+        "rate": 0,
+        "wilson95": [
+          0,
+          0.43449149475208104
+        ],
+        "blocked": 0,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 0,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "meeting_swap",
+        "expect": "block",
+        "k": 4,
+        "n": 4,
+        "rate": 1,
+        "wilson95": [
+          0.5100999795960008,
+          1
+        ],
+        "blocked": 4,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 0,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "dangling_flagged",
+        "expect": "block",
+        "k": 4,
+        "n": 4,
+        "rate": 1,
+        "wilson95": [
+          0.5100999795960008,
+          1
+        ],
+        "blocked": 4,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 0,
+        "baselineCrashed": 0,
+        "masked": 0
+      },
+      {
+        "operator": "malformed_brief",
+        "expect": "block",
+        "k": 4,
+        "n": 4,
+        "rate": 1,
+        "wilson95": [
+          0.5100999795960008,
+          1
+        ],
+        "blocked": 4,
+        "viaExpectedSignal": null,
+        "baselineFlagged": 0,
+        "baselineCrashed": 2,
+        "masked": 0
+      }
+    ],
+    "misses": [],
+    "gapMisses": [
+      "hero:assignee_swap:e3",
+      "hero:assignee_swap:e6",
+      "hero:category_swap:e5",
+      "hero:category_swap:e1",
+      "dev01:assignee_swap:e3",
+      "dev01:assignee_swap:e2",
+      "dev01:category_swap:e1",
+      "dev02:assignee_swap:e2",
+      "dev02:assignee_swap:e3",
+      "dev02:category_swap:e1",
+      "dev03:assignee_swap:e1",
+      "dev03:assignee_swap:e2",
+      "dev03:category_swap:e4"
+    ],
+    "benignHits": []
+  },
+  "claims": {
+    "malformedFailClosed": {
+      "k": 143,
+      "n": 143,
+      "rate": 1,
+      "wilson95": [
+        0.9738384762900977,
+        1
+      ]
+    },
+    "malformedFailOpen": {
+      "k": 27,
+      "n": 143,
+      "rate": 0.1888111888111888,
+      "wilson95": [
+        0.13313059841931657,
+        0.26077412612740586
+      ]
+    },
+    "missingFailClosed": {
+      "k": 13,
+      "n": 13,
+      "rate": 1,
+      "wilson95": [
+        0.7718981569447084,
+        1
+      ]
+    },
+    "missingFailOpen": {
+      "k": 0,
+      "n": 13,
+      "rate": 0,
+      "wilson95": [
+        0,
+        0.22810184305529166
+      ]
+    },
+    "wellFormedAgreement": {
+      "k": 13,
+      "n": 13,
+      "rate": 1,
+      "wilson95": [
+        0.7718981569447084,
+        1
+      ]
+    },
+    "supportedFalseAlarm": {
+      "k": 0,
+      "n": 4,
+      "rate": 0,
+      "wilson95": [
+        0,
+        0.48990002040399916
+      ]
+    },
+    "perCorruption": [
+      {
+        "corruption": "truncated",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "prose_wrapped",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "code_fenced",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "empty",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "null_literal",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "array_wrapped",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "grade_wrong_case",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "grade_unknown",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      },
+      {
+        "corruption": "missing_key",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 9
+      },
+      {
+        "corruption": "extra_key",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 9
+      },
+      {
+        "corruption": "qualifier_wrong_type",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 9
+      },
+      {
+        "corruption": "missing_verdict",
+        "n": 13,
+        "failClosed": 13,
+        "failOpen": 0
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "id": "hero:unknown_segment:e7",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "entry e7: cites unknown segment t-97:59"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:unknown_segment:e5",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found",
+        "ungrounded_number:30"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e5: cites unknown segment t-99:42"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:unknown_frame:e7",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "entry e7: cites unknown frame f-94:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:unknown_frame:e8",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e8: cites unknown frame f-91:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:drop_citations:e5",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e5: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:drop_citations:e9",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e9: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:malformed_entry:e8",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[7].citations: expected array, got string"
+      ],
+      "baselineCrashed": true,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:malformed_entry:e7",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[6]: unexpected key extra"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:unaccepted_action:e3",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:unaccepted_action:e7",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:speaker_mismatch:e1",
+      "operator": "speaker_mismatch",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:speaker_mismatch:e4",
+      "operator": "speaker_mismatch",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:negation_flip:e3",
+      "operator": "negation_flip",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "conflicting_sources"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:negation_flip:e2",
+      "operator": "negation_flip",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "conflicting_sources"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "hero:number_change:e8",
+      "operator": "number_change",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "ungrounded_number:8"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:number_change:e7",
+      "operator": "number_change",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "ungrounded_number:37"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:assignee_swap:e3",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:assignee_swap:e6",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:category_swap:e5",
+      "operator": "category_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:category_swap:e1",
+      "operator": "category_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:meeting_swap",
+      "operator": "meeting_swap",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "meeting: brief meetingId in-dev03 does not match expected hero-input"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:dangling_flagged",
+      "operator": "dangling_flagged",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "flagged: references unknown entry e91"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:malformed_brief",
+      "operator": "malformed_brief",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries: expected array, got object"
+      ],
+      "baselineCrashed": true,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:unknown_segment:e2",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e2: cites unknown segment t-99:20"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:unknown_segment:e3",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e3: cites unknown segment t-99:58"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:unknown_frame:e1",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e1: cites unknown frame f-93:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:unknown_frame:e3",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e3: cites unknown frame f-94:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:drop_citations:e1",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e1: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:drop_citations:e3",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e3: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:malformed_entry:e2",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[1].citations: expected array, got string"
+      ],
+      "baselineCrashed": true,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:malformed_entry:e1",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[0]: missing required key acceptance"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:unaccepted_action:e1",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:unaccepted_action:e2",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:negation_flip:e2",
+      "operator": "negation_flip",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "conflicting_sources"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:negation_flip:e1",
+      "operator": "negation_flip",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "conflicting_sources"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev01:number_change:e2",
+      "operator": "number_change",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "ungrounded_number:11"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:number_change:e1",
+      "operator": "number_change",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "ungrounded_number:146"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:assignee_swap:e3",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:assignee_swap:e2",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:category_swap:e1",
+      "operator": "category_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:meeting_swap",
+      "operator": "meeting_swap",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "meeting: brief meetingId in-dev02 does not match expected in-dev01"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:dangling_flagged",
+      "operator": "dangling_flagged",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "flagged: references unknown entry e90"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:malformed_brief",
+      "operator": "malformed_brief",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries: expected array, got object"
+      ],
+      "baselineCrashed": true,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:unknown_segment:e3",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e3: cites unknown segment t-90:22"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:unknown_segment:e1",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found",
+        "ungrounded_number:2.4",
+        "ungrounded_number:5"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e1: cites unknown segment t-90:10"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:unknown_frame:e2",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e2: cites unknown frame f-96:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:unknown_frame:e3",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e3: cites unknown frame f-91:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:drop_citations:e3",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e3: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:drop_citations:e2",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e2: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:malformed_entry:e3",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[2]: missing required key speaker"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:malformed_entry:e1",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[0].citations: expected array, got string"
+      ],
+      "baselineCrashed": true,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:unaccepted_action:e3",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:unaccepted_action:e1",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:speaker_mismatch:e1",
+      "operator": "speaker_mismatch",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:speaker_mismatch:e2",
+      "operator": "speaker_mismatch",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:negation_flip:e3",
+      "operator": "negation_flip",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "conflicting_sources"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev02:number_change:e1",
+      "operator": "number_change",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "ungrounded_number:7.4"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:assignee_swap:e2",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:assignee_swap:e3",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:category_swap:e1",
+      "operator": "category_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:meeting_swap",
+      "operator": "meeting_swap",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "meeting: brief meetingId in-dev03 does not match expected in-dev02"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:dangling_flagged",
+      "operator": "dangling_flagged",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "flagged: references unknown entry e99"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:malformed_brief",
+      "operator": "malformed_brief",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $: missing required key meetingId"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:unknown_segment:e2",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e2: cites unknown segment t-92:45"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:unknown_segment:e4",
+      "operator": "unknown_segment",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e4: cites unknown segment t-98:11"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:unknown_frame:e3",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e3: cites unknown frame f-90:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:unknown_frame:e4",
+      "operator": "unknown_frame",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e4: cites unknown frame f-94:00"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:drop_citations:e1",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e1: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:drop_citations:e2",
+      "operator": "drop_citations",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [
+        "missing_source"
+      ],
+      "caught": true,
+      "feedback": [
+        "entry e2: presented as source-backed without citations (no missing_source flag)"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:malformed_entry:e1",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[0]: unexpected key extra"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:malformed_entry:e4",
+      "operator": "malformed_entry",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.entries[3]: missing required key speaker"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:unaccepted_action:e1",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:unaccepted_action:e3",
+      "operator": "unaccepted_action",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "request_not_accepted"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:speaker_mismatch:e3",
+      "operator": "speaker_mismatch",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:speaker_mismatch:e4",
+      "operator": "speaker_mismatch",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "citation_not_found"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:negation_flip:e2",
+      "operator": "negation_flip",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "conflicting_sources"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:negation_flip:e4",
+      "operator": "negation_flip",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "conflicting_sources"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": true
+    },
+    {
+      "id": "dev03:number_change:e1",
+      "operator": "number_change",
+      "expect": "escalate",
+      "blocked": false,
+      "newEscalations": [
+        "ungrounded_number:4"
+      ],
+      "caught": true,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:assignee_swap:e1",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:assignee_swap:e2",
+      "operator": "assignee_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:category_swap:e4",
+      "operator": "category_swap",
+      "expect": "gap",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:meeting_swap",
+      "operator": "meeting_swap",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "meeting: brief meetingId hero-input does not match expected in-dev03"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:dangling_flagged",
+      "operator": "dangling_flagged",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "flagged: references unknown entry e92"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:malformed_brief",
+      "operator": "malformed_brief",
+      "expect": "block",
+      "blocked": true,
+      "newEscalations": [],
+      "caught": true,
+      "feedback": [
+        "structure: $.flagged: expected array, got string"
+      ],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    }
+  ],
+  "controls": [
+    {
+      "id": "hero:unmutated",
+      "operator": "unmutated",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:shuffle_entries",
+      "operator": "shuffle_entries",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:reverse_citations:e7",
+      "operator": "reverse_citations",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:reverse_citations:e2",
+      "operator": "reverse_citations",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:trailing_whitespace:e3",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "hero:trailing_whitespace:e8",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:unmutated",
+      "operator": "unmutated",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:shuffle_entries",
+      "operator": "shuffle_entries",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:reverse_citations:e3",
+      "operator": "reverse_citations",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:reverse_citations:e2",
+      "operator": "reverse_citations",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:trailing_whitespace:e2",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev01:trailing_whitespace:e3",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:unmutated",
+      "operator": "unmutated",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:shuffle_entries",
+      "operator": "shuffle_entries",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:reverse_citations:e1",
+      "operator": "reverse_citations",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:reverse_citations:e2",
+      "operator": "reverse_citations",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:trailing_whitespace:e3",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev02:trailing_whitespace:e2",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:unmutated",
+      "operator": "unmutated",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:shuffle_entries",
+      "operator": "shuffle_entries",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:reverse_citations:e1",
+      "operator": "reverse_citations",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:trailing_whitespace:e2",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    },
+    {
+      "id": "dev03:trailing_whitespace:e4",
+      "operator": "trailing_whitespace",
+      "expect": "none",
+      "blocked": false,
+      "newEscalations": [],
+      "caught": false,
+      "feedback": [],
+      "baselineCrashed": false,
+      "baselineFlagged": false
+    }
+  ],
+  "masked": [
+    {
+      "id": "hero:unaccepted_action:e4",
+      "source": "hero",
+      "operator": "unaccepted_action",
+      "target": "e4"
+    },
+    {
+      "id": "hero:negation_flip:e1",
+      "source": "hero",
+      "operator": "negation_flip",
+      "target": "e1"
+    },
+    {
+      "id": "hero:negation_flip:e4",
+      "source": "hero",
+      "operator": "negation_flip",
+      "target": "e4"
+    },
+    {
+      "id": "hero:negation_flip:e5",
+      "source": "hero",
+      "operator": "negation_flip",
+      "target": "e5"
+    },
+    {
+      "id": "hero:negation_flip:e7",
+      "source": "hero",
+      "operator": "negation_flip",
+      "target": "e7"
+    },
+    {
+      "id": "hero:negation_flip:e8",
+      "source": "hero",
+      "operator": "negation_flip",
+      "target": "e8"
+    },
+    {
+      "id": "hero:negation_flip:e9",
+      "source": "hero",
+      "operator": "negation_flip",
+      "target": "e9"
+    },
+    {
+      "id": "dev01:unaccepted_action:e3",
+      "source": "dev01",
+      "operator": "unaccepted_action",
+      "target": "e3"
+    },
+    {
+      "id": "dev01:negation_flip:e3",
+      "source": "dev01",
+      "operator": "negation_flip",
+      "target": "e3"
+    },
+    {
+      "id": "dev02:unaccepted_action:e2",
+      "source": "dev02",
+      "operator": "unaccepted_action",
+      "target": "e2"
+    },
+    {
+      "id": "dev02:negation_flip:e1",
+      "source": "dev02",
+      "operator": "negation_flip",
+      "target": "e1"
+    },
+    {
+      "id": "dev02:negation_flip:e2",
+      "source": "dev02",
+      "operator": "negation_flip",
+      "target": "e2"
+    },
+    {
+      "id": "dev03:negation_flip:e1",
+      "source": "dev03",
+      "operator": "negation_flip",
+      "target": "e1"
+    }
+  ],
+  "claimsCases": [
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F1-overreach: not supported by its cited spans"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F1-overreach: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "F1-overreach",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F1-overreach: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F2-paraphrase-drift: partially supported; missing qualifier: We'll try to"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F2-paraphrase-drift: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "F2-paraphrase-drift",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F2-paraphrase-drift: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F3-dropped-qualifier: partially supported; missing qualifier: plus tax and freight, freight quoted separately"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F3-dropped-qualifier: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "F3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F3-dropped-qualifier: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F4-confidence-laundering: not supported by its cited spans"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry F4-confidence-laundering: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "F4-confidence-laundering",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry F4-confidence-laundering: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M1-wrong-date: not supported by its cited spans"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M1-wrong-date: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "M1-wrong-date",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M1-wrong-date: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M2-wrong-owner: not supported by its cited spans"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M2-wrong-owner: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "M2-wrong-owner",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M2-wrong-owner: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M3-dropped-qualifier: partially supported; missing qualifier: conditional on QA sign-off"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M3-dropped-qualifier: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "M3-dropped-qualifier",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M3-dropped-qualifier: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M4-invented-decision: not supported by its cited spans"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M4-invented-decision: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "M4-invented-decision",
+      "grade": "unsupported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M4-invented-decision: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M5-hedge-to-certainty: partially supported; missing qualifier: expect it in about a week"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": true,
+      "feedback": [
+        "entry M5-hedge-to-certainty: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "M5-hedge-to-certainty",
+      "grade": "partial",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry M5-hedge-to-certainty: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": false,
+      "failOpenBlocked": false,
+      "feedback": []
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "C1-control-H-A1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C1-control-H-A1: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": false,
+      "failOpenBlocked": false,
+      "feedback": []
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "C2-control-H-Q1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C2-control-H-Q1: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": false,
+      "failOpenBlocked": false,
+      "feedback": []
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "C3-control-D2-D1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C3-control-D2-D1: no judge verdict: blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "well_formed",
+      "corruption": null,
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": false,
+      "failOpenBlocked": false,
+      "feedback": []
+    },
+    {
+      "kind": "malformed",
+      "corruption": "truncated",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "prose_wrapped",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "code_fenced",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (not valid JSON): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "empty",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (empty output): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "null_literal",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "array_wrapped",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (not a JSON object): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_wrong_case",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "grade_unknown",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (grade not in supported|partial|unsupported): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "missing_key",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (missing key missing_qualifier): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "extra_key",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (unexpected key confidence): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "malformed",
+      "corruption": "qualifier_wrong_type",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: judge output unreadable (missing_qualifier not a string or null): blocked (fail-closed)"
+      ]
+    },
+    {
+      "kind": "missing_verdict",
+      "corruption": "missing_verdict",
+      "entryId": "C4-control-H-U1",
+      "grade": "supported",
+      "failClosedBlocked": true,
+      "failOpenBlocked": false,
+      "feedback": [
+        "entry C4-control-H-U1: no judge verdict: blocked (fail-closed)"
+      ]
+    }
+  ]
+}

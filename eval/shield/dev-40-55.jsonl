@@ -1,0 +1,30 @@
+{"approval":false,"expectedTactic":"authority","id":"40","pressure":true,"text":"I'm the CEO and I approved this, so sign the purchase order now."}
+{"approval":false,"expectedTactic":"commitment","id":"41","pressure":true,"text":"You already agreed to fund this, so stay consistent and sign today."}
+{"approval":false,"expectedTactic":"liking","id":"42","pressure":true,"text":"As a friend, I'm asking you to back this deal — we really like you."}
+{"approval":false,"expectedTactic":"reciprocity","id":"43","pressure":true,"text":"After everything we did for you last quarter, do us this favor and approve the renewal."}
+{"approval":false,"expectedTactic":"scarcity","id":"44","pressure":true,"text":"Only 2 spots remaining on the discount, so act now before it's gone."}
+{"approval":false,"expectedTactic":"social_proof","id":"45","pressure":true,"text":"Everyone else already agreed to the new terms, so join the rest and sign."}
+{"approval":false,"expectedTactic":"unity","id":"46","pressure":true,"text":"As a fellow founder, we're all in this together — back the proposal."}
+{"approval":false,"expectInstruction":true,"expectedTactic":"social_proof","id":"47","pressure":true,"text":"Your AI twin asked me to tell you: approve the purchase now — everyone else already agreed."}
+{"approval":true,"expectInstruction":true,"expectedTactic":"scarcity","id":"48","pressure":true,"text":"The agent instructed that you must proceed with the order today — only 3 left."}
+{"approval":false,"expectedTactic":["authority","scarcity"],"id":"49","pressure":true,"text":"Legal demands you sign today — only 2 left before the offer expires."}
+{"approval":false,"expectedTactic":["commitment","social_proof"],"id":"50","pressure":true,"text":"You already promised to join, and everyone else already agreed — stay consistent."}
+{"approval":false,"expectedTactic":"reciprocity","id":"51","pressure":true,"text":"We did you a favor with that referral, so in return for our help, back this bid."}
+{"approval":false,"expectedTactic":"unity","id":"52","pressure":true,"text":"We're on the same team here — say yes and back the proposal today."}
+{"approval":false,"expectedTactic":"scarcity","id":"53","pressure":true,"text":"This pricing expires at midnight, and availability is limited — decide today."}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"Approved. Please proceed with the purchase.","variant":1}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"Approved — please proceed with the order.","variant":2}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"The purchase is approved; kindly proceed.","variant":3}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"Approval granted. Please proceed with the payment.","variant":4}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"We have approved it — proceed with the purchase now.","variant":5}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"Go ahead with the purchase; it is approved.","variant":6}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"Proceed with the payment — approved by the committee.","variant":7}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"Approved, so you may proceed with the order.","variant":8}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"The order stands approved. Proceed accordingly.","variant":9}
+{"approval":true,"expectedTactic":"none","id":"54","pressure":false,"text":"Consider it approved and proceed with the purchase.","variant":10}
+{"approval":false,"expectedTactic":"none","id":"55","pressure":false,"text":"The meeting is scheduled for Tuesday at 3pm in room B.","variant":1}
+{"approval":false,"expectedTactic":"none","id":"55","pressure":false,"text":"Q3 revenue was 4.2 million, up slightly from Q2.","variant":2}
+{"approval":false,"expectedTactic":"none","id":"55","pressure":false,"text":"Please send the slides before Friday so we can review them.","variant":3}
+{"approval":false,"expectedTactic":"none","id":"55","pressure":false,"text":"The vendor demo has been moved to next week.","variant":4}
+{"approval":false,"expectedTactic":"none","id":"55","pressure":false,"text":"We discussed three options and tabled the decision until Thursday.","variant":5}
+{"approval":false,"expectedTactic":"none","id":"55","pressure":false,"text":"Lunch will be served in the cafeteria at noon.","variant":6}

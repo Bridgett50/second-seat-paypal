@@ -1,0 +1,139 @@
+{
+  "version": "support-cases-v1",
+  "notes": "Synthetic support-grading cases (made up for offline scoring; never model output). Span text is paraphrased from the cited transcript segments. expected = sealed-truth-style labels the judge must match. kind=control entries are unmutated originals (expected supported); kind=fixture are the 4 acceptance fixtures; kind=mutant are seeded errors per eval/truth/seeded-errors-spec.md (citations unchanged, one change each).",
+  "cases": [
+    {
+      "id": "F1-overreach",
+      "kind": "fixture",
+      "entryText": "Team agreed to switch to Brightline's 10-inch box.",
+      "citedSpans": [
+        "[03:40] Dana Okafor: Decision on our side: we stay with the 8-inch box, not the 10-inch. The 10-inch doesn't fit our shelves.",
+        "[03:48] Priya Shah: Agreed, 8-inch."
+      ],
+      "expected": { "grade": "unsupported", "missingQualifier": null }
+    },
+    {
+      "id": "F2-paraphrase-drift",
+      "kind": "fixture",
+      "entryText": "Marco Reyes guaranteed the freight quote by Monday.",
+      "citedSpans": [
+        "[06:50] Dana Okafor: Marco, can you send the freight quote in writing?",
+        "[06:58] Marco Reyes: We'll try to get freight numbers to you early next week."
+      ],
+      "expected": { "grade": "partial", "missingQualifier": null }
+    },
+    {
+      "id": "F3-dropped-qualifier",
+      "kind": "fixture",
+      "entryText": "Price is 41 cents per unit.",
+      "citedSpans": [
+        "[02:15] Dana Okafor: And the price on the slide is 41 cents a unit?",
+        "[02:22] Marco Reyes: 41 cents a unit, plus tax and freight, freight quoted separately."
+      ],
+      "expected": { "grade": "partial", "missingQualifier": "plus tax and freight" }
+    },
+    {
+      "id": "F4-confidence-laundering",
+      "kind": "fixture",
+      "entryText": "Churn impact of about 2% is a measured result.",
+      "citedSpans": [
+        "[03:00] Speaker: Churn impact of about 2% is a projection, not a measured result."
+      ],
+      "expected": { "grade": "partial", "missingQualifier": "projected" }
+    },
+    {
+      "id": "M1-wrong-date",
+      "kind": "mutant",
+      "mutation": "M1",
+      "entryText": "Priya Shah sends Marco Reyes the final artwork files by November 6.",
+      "citedSpans": [
+        "[04:41] Dana Okafor: Priya, can you send Marco the final artwork by Friday, October 30?",
+        "[04:47] Priya Shah: Yes, I'll send the artwork files by Friday the 30th."
+      ],
+      "expected": { "grade": "unsupported", "missingQualifier": null }
+    },
+    {
+      "id": "M2-wrong-owner",
+      "kind": "mutant",
+      "mutation": "M2",
+      "entryText": "Priya Shah emails the loading-dock address to Marco Reyes.",
+      "citedSpans": [
+        "[05:31] Dana Okafor: I'll email you the loading-dock address tomorrow."
+      ],
+      "expected": { "grade": "unsupported", "missingQualifier": null }
+    },
+    {
+      "id": "M3-dropped-qualifier",
+      "kind": "mutant",
+      "mutation": "M3",
+      "entryText": "Ship v2.4 on Thursday, November 5.",
+      "citedSpans": [
+        "[00:45] Speaker: Ship v2.4 Thursday, November 5, conditional on QA sign-off."
+      ],
+      "expected": { "grade": "partial", "missingQualifier": "if QA passes" }
+    },
+    {
+      "id": "M4-invented-decision",
+      "kind": "mutant",
+      "mutation": "M4",
+      "entryText": "Brightline committed to a backup delivery if the November 30 date slips.",
+      "citedSpans": [
+        "[08:15] Priya Shah: What about a backup if the 30th slips? We can't launch without boxes.",
+        "[08:26] Marco Reyes: I'd have to check with the plant. I can't promise anything on a backup.",
+        "[08:40] Dana Okafor: So that's open. We'll come back to a backup plan."
+      ],
+      "expected": { "grade": "unsupported", "missingQualifier": null }
+    },
+    {
+      "id": "M5-hedge-to-certainty",
+      "kind": "mutant",
+      "mutation": "M5",
+      "entryText": "Marco Reyes ships a printed sample box in exactly seven days.",
+      "citedSpans": [
+        "[10:02] Dana Okafor: I also want to see a printed sample before we sign anything.",
+        "[10:10] Marco Reyes: I'll send a printed sample; expect it in about a week."
+      ],
+      "expected": { "grade": "partial", "missingQualifier": null }
+    },
+    {
+      "id": "C1-control-H-A1",
+      "kind": "control",
+      "entryText": "Priya Shah sends Marco Reyes the final artwork files by Friday, October 30.",
+      "citedSpans": [
+        "[04:41] Dana Okafor: Priya, can you send Marco the final artwork by Friday, October 30?",
+        "[04:47] Priya Shah: Yes, I'll send the artwork files by Friday the 30th."
+      ],
+      "expected": { "grade": "supported", "missingQualifier": null }
+    },
+    {
+      "id": "C2-control-H-Q1",
+      "kind": "control",
+      "entryText": "Price is 41 cents per unit PLUS tax and freight (freight quoted separately).",
+      "citedSpans": [
+        "[02:15] Dana Okafor: And the price on the slide is 41 cents a unit?",
+        "[02:22] Marco Reyes: 41 cents a unit, plus tax and freight, freight quoted separately."
+      ],
+      "expected": { "grade": "supported", "missingQualifier": null }
+    },
+    {
+      "id": "C3-control-D2-D1",
+      "kind": "control",
+      "entryText": "Ship v2.4 on Thursday, November 5, conditional on QA sign-off.",
+      "citedSpans": [
+        "[00:45] Speaker: Ship v2.4 Thursday, November 5, conditional on QA sign-off."
+      ],
+      "expected": { "grade": "supported", "missingQualifier": null }
+    },
+    {
+      "id": "C4-control-H-U1",
+      "kind": "control",
+      "entryText": "No backup plan if November 30 delivery slips; Marco would have to check with the plant.",
+      "citedSpans": [
+        "[08:15] Priya Shah: What about a backup if the 30th slips? We can't launch without boxes.",
+        "[08:26] Marco Reyes: I'd have to check with the plant. I can't promise anything on a backup.",
+        "[08:40] Dana Okafor: So that's open. We'll come back to a backup plan."
+      ],
+      "expected": { "grade": "supported", "missingQualifier": null }
+    }
+  ]
+}

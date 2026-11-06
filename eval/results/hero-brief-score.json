@@ -1,0 +1,11 @@
+{
+  "briefEntries": 9,
+  "truthEntries": 12,
+  "validatorClean": 8,
+  "matched": 11,
+  "categoryAgree": 8,
+  "unmatchedTruthIds": [
+    "H-Q1"
+  ],
+  "scoredAt": "2026-10-26T19:44:59.772Z"
+}

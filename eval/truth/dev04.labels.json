@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "truth-draft-0.1",
+  "meetingId": "synthetic-dev04-nonprofit",
+  "synthetic": true,
+  "status": "DRAFT - not sealed, not hashed",
+  "entries": [
+    {
+      "id": "D4-D1",
+      "category": "decision",
+      "text": "Food drive is on November 21, afternoon (hall available only after 2 p.m.).",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-00:40"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-00:55"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-01:00"
+        }
+      ],
+      "flags": [],
+      "truth": {
+        "due_date": "2026-11-21",
+        "qualifiers_required": [
+          "after 2 p.m."
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D4-A1",
+      "category": "action_item",
+      "text": "Hana Ito designs the flyers.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-01:52"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-02:50"
+        },
+        {
+          "kind": "segment",
+          "segmentId": "t-02:56"
+        }
+      ],
+      "flags": [],
+      "assignee": "Hana Ito",
+      "requester": "Grace Kim",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "2026-11-09",
+        "qualifiers_required": [],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D4-A2",
+      "category": "action_item",
+      "text": "Sam Adeyemi prints 200 flyers after receiving Hana's design.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-02:10"
+        }
+      ],
+      "flags": [],
+      "assignee": "Sam Adeyemi",
+      "acceptance": "established",
+      "truth": {
+        "due_date": "after design received (no fixed date)",
+        "qualifiers_required": [
+          "once Hana sends the design"
+        ],
+        "expected_support": "supported"
+      }
+    },
+    {
+      "id": "D4-N1",
+      "category": "action_item",
+      "text": "Hana Ito prints the flyers.",
+      "citations": [
+        {
+          "kind": "segment",
+          "segmentId": "t-01:52"
+        }
+      ],
+      "flags": [],
+      "assignee": "Hana Ito",
+      "truth": {
+        "due_date": null,
+        "qualifiers_required": [],
+        "expected_support": "unsupported",
+        "note": "Wrong owner; Hana said she can't print."
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[00:03] Raj Patel: Standup for the Tidewell invoicing release.
+[00:20] Mia Chen: The export bug is fixed in staging.
+[00:45] Raj Patel: Let's ship version 2.4 on Thursday November 5, assuming QA signs off.
+[00:52] Mia Chen: Agreed, Thursday if QA passes.
+[01:30] Raj Patel: Owen, can you finish the QA pass by Wednesday?
+[01:36] Owen Brooks: I can do most of it by Wednesday, the PDF tests might slip.
+[02:20] Mia Chen: I'll write the release notes by Tuesday.
+[03:00] Raj Patel: Projected impact on churn is about two percent, but that's a projection.

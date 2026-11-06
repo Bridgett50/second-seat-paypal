@@ -1,0 +1,16 @@
+# Rules check
+
+- [ ] Video shows only Oct 26+ work. The disclosure card is line 1, spoken and on screen.
+- [ ] No banned category. This is a meeting-time AI twin demo (a scripted offline meeting room with no model calls) plus a transcript review workflow, not any of the excluded builds.
+- [ ] Every number traces to a log. Any on-screen or spoken number without a source file in brackets gets cut before recording.
+- [ ] X post is draft only. Bridgett posts it herself; nothing here auto-posts.
+- [ ] No deploy on camera. The public link is demo mode with recorded examples. The Oct 28 live run (3/3 at `0365fdb`) is documented as a written run summary (owner-attested, synthetic data), not a screen recording. No live-run clip is planned for the video; the video shows only the scripted offline meeting room. Organizers confirmed recorded runs are fine if labeled. Do not present a fixture as that run. Spend cap $5/day plus daily call-count cap with refuse-and-stop behavior [docs/failure-modes.md].
+- [ ] Replay honesty: the scripted walkthrough says "replay" or "offline demo." A labeled recording of the live run is separate from that walkthrough. In the current scripted and public demo Second Seat does not join calls or send a reply; permissioned participation and full meeting-to-email remain product direction, not a working feature today.
+- [ ] Glimmer honesty: say "We run Muse Glimmer (open weights) on our own Modal A100." The incomplete historical run is shown WITH its limitations (6/8 requests, 18/29 on completed, 18/39 end-to-end, span coverage not re-scorable) [services/bot/fixtures/glimmer-run/rescore.json]. The n=10 10/10 figure [services/bot/fixtures/glimmer-live-eval-n10.json] is a small smoke test and is never the headline.
+- [ ] SAM honesty: SAM/image features are experimental, off by default, and not in the core video at all.
+- [ ] No PDF drop shown. The PDF normalizer was cut.
+- [ ] No screenshot upload shown. The core video pastes transcript text only.
+- [ ] Support numbers shown with misses: frozen rerun mismatched 2 cases [eval/results/support-table-frozen-live.md].
+- [ ] No "catches everything" claim. No unsupported privacy guarantee: say what the code does (approved redacted text through the privacy gate; test mode offline even with credentials) [apps/web/src/liveConfig.ts], never "the raw transcript never left our server" as a guarantee.
+- [ ] Founder story: done — supplied in the README. User observations and video URLs: PENDING — not yet supplied. Nothing invented.
+- [ ] Statuses stated accurately: A1–A9 merged; live end-to-end passed 3/3 on Oct 28, 2026 on main 0365fdb (the owner's private run summary second-seat-live3-run-summary.md is the record); rehearsals passed at 8c00c32 and on the November 15 fix (#116); verification is wired into the session (#113); Persuasion Shield: experimental layer; on dev set the pattern layer caught 14/14 and Spark added no extra catches; held-out run Nov 2 will test it (#114/#115); the public link is demo mode with recorded examples; the live run is labeled as a written run summary (owner-attested, synthetic data), not a screen recording; partner prize: none selected; partner providers used: Baseten (Muse Code), Modal (Glimmer, Live mode only). Video URL and user observations stay PENDING. Founder story: done.

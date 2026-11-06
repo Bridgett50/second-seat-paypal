@@ -1,0 +1,86 @@
+{
+ "source": "GitHub REST API GET /repos/Bridgett50/second-seat-hackathon/actions/runs/{id} via gh api (readonly; no rerun/trigger)",
+ "observed_at": "2026-10-27T23:17:29Z",
+ "runs": [
+  {
+   "conclusion": "success",
+   "created_at": "2026-10-27T07:01:02Z",
+   "event": "push",
+   "head_branch": "hackathon/b6-pressure",
+   "head_sha": "2477d2ec82202b535a8bef13fbdaa97e05a647ba",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40464552140",
+   "run_id": 40464552140,
+   "status": "completed"
+  },
+  {
+   "conclusion": "success",
+   "created_at": "2026-10-27T08:59:44Z",
+   "event": "pull_request",
+   "head_branch": "hackathon/c6-hermetic",
+   "head_sha": "7efcae01fa594a564165a69a2d065f86d9c15d03",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40477442184",
+   "run_id": 40477442184,
+   "status": "completed"
+  },
+  {
+   "conclusion": "success",
+   "created_at": "2026-10-27T09:12:47Z",
+   "event": "pull_request",
+   "head_branch": "hackathon/c1-revisions",
+   "head_sha": "8d1ca970b1993b34112f1276b9915eb2219b0b7a",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40479067260",
+   "run_id": 40479067260,
+   "status": "completed"
+  },
+  {
+   "conclusion": "success",
+   "created_at": "2026-10-27T09:19:27Z",
+   "event": "pull_request",
+   "head_branch": "hackathon/c2-receipts",
+   "head_sha": "2617b7978363963e5126d8e4ca643f176cecfd5f",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40479898486",
+   "run_id": 40479898486,
+   "status": "completed"
+  },
+  {
+   "conclusion": "failure",
+   "created_at": "2026-10-27T09:24:56Z",
+   "event": "pull_request",
+   "head_branch": "hackathon/c3-contract",
+   "head_sha": "fb4c216d60b08aef4308a05f25250b5f8adfa925",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40480594570",
+   "run_id": 40480594570,
+   "status": "completed"
+  },
+  {
+   "conclusion": "failure",
+   "created_at": "2026-10-27T09:53:10Z",
+   "event": "pull_request",
+   "head_branch": "hackathon/c4-replay",
+   "head_sha": "b383e12615b5df48866c7f276d1095d7f116850c",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40484194423",
+   "run_id": 40484194423,
+   "status": "completed"
+  },
+  {
+   "conclusion": "failure",
+   "created_at": "2026-10-27T09:59:11Z",
+   "event": "pull_request",
+   "head_branch": "hackathon/c5-launch",
+   "head_sha": "789ab3c3475145404484f39c428883dcc78557b7",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40484954956",
+   "run_id": 40484954956,
+   "status": "completed"
+  },
+  {
+   "conclusion": "success",
+   "created_at": "2026-10-27T10:08:28Z",
+   "event": "pull_request",
+   "head_branch": "hackathon/c7-pressure",
+   "head_sha": "1153dd8f6aae575a8f46788b9bf3432d28e43817",
+   "html_url": "https://github.com/Bridgett50/second-seat-hackathon/actions/runs/40486174227",
+   "run_id": 40486174227,
+   "status": "completed"
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+import { test, expect, beforeEach, afterEach } from "vitest";
+import { mkdtempSync, mkdirSync, existsSync, readFileSync, unlinkSync, rmdirSync, writeFileSync, statSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import { execFileSync } from "node:child_process";
+import { createGoogleWriteOutbox } from "../src/googleWriteOutbox.js";
+import { transpileModule, ModuleKind, ScriptTarget } from "typescript";
+const base = fileURLToPath(new URL("../../../../test-temp/", import.meta.url));
+let dir=""; let journalPath=""; let lockPath=""; let compiledPath="";
+function k64(i:number){ return i.toString(16).padStart(64,"0"); }
+beforeEach(()=>{
+  try{ mkdirSync(base,{recursive:true}); }catch{}
+  dir=mkdtempSync(join(base,"google-outbox-"));
+  journalPath=join(dir,"journal.ndjson");
+  lockPath=journalPath+".lock";
+  compiledPath=join(dir,"googleWriteOutbox.mjs");
+});
+afterEach(()=>{
+  for(const p of [journalPath, lockPath, compiledPath]) if(existsSync(p)) unlinkSync(p);
+  rmdirSync(dir);
+});
+test("lifecycle",()=>{
+  const o1=createGoogleWriteOutbox({journalPath});
+  expect(o1.lookup(k64(1))).toBeNull();
+  expect(existsSync(journalPath)).toBe(false);
+  const k=k64(10);
+  expect(o1.claim(k)).toBe(true);
+  const s=o1.lookup(k); expect(s).toEqual({status:"attempted"}); expect(Object.isFrozen(s!)).toBe(true);
+  const o2=createGoogleWriteOutbox({journalPath});
+  expect(o2.claim(k)).toBe(false);
+  o1.settle(k,{status:"confirmed",providerId:"draft_123"});
+  const c=o1.lookup(k); expect(c).toEqual({status:"confirmed",providerId:"draft_123"}); expect(Object.isFrozen(c!)).toBe(true);
+  expect(createGoogleWriteOutbox({journalPath}).lookup(k)).toEqual(c);
+  expect(o1.claim(k)).toBe(false);
+  expect(()=>o1.settle(k,{status:"confirmed"})).toThrow("Google write outbox unavailable");
+  const k2=k64(11); expect(o1.claim(k2)).toBe(true); o1.settle(k2,{status:"unconfirmed"}); expect(o1.claim(k2)).toBe(false);
+  expect(()=>o1.settle(k64(99),{status:"confirmed"})).toThrow("Google write outbox unavailable");
+  expect(o1.claim("bad")).toBe(false);
+  expect(()=>o1.lookup("bad")).toThrow("Google write outbox unavailable");
+});
+test("malformed strict fail-closed",()=>{
+  const o=createGoogleWriteOutbox({journalPath});
+  const k=k64(20); expect(o.claim(k)).toBe(true);
+  const before=readFileSync(journalPath,"utf8");
+  writeFileSync(journalPath,'{"keyHash":"'+k64(30)+'","status":"confirmed"}\n');
+  expect(o.claim(k64(31))).toBe(false);
+  expect(()=>o.lookup(k)).toThrow("Google write outbox unavailable");
+  expect(()=>o.settle(k,{status:"confirmed"})).toThrow("Google write outbox unavailable");
+  expect(readFileSync(journalPath,"utf8")).toBe('{"keyHash":"'+k64(30)+'","status":"confirmed"}\n');
+  writeFileSync(journalPath,'{"keyHash":"'+k64(32)+'","status":"attempted"}');
+  expect(o.claim(k64(33))).toBe(false);
+  writeFileSync(journalPath,'{"keyHash":"'+k64(40)+'","status":"weird"}\n');
+  expect(o.claim(k64(34))).toBe(false);
+  writeFileSync(journalPath,'{"keyHash":"'+k64(41)+'","status":"attempted","extra":1}\n');
+  expect(o.claim(k64(35))).toBe(false);
+  expect(readFileSync(journalPath,"utf8")).toBe('{"keyHash":"'+k64(41)+'","status":"attempted","extra":1}\n');
+});
+test("exclusive foreign lock",()=>{
+  writeFileSync(lockPath,"x");
+  const o=createGoogleWriteOutbox({journalPath});
+  const k=k64(50);
+  expect(o.claim(k)).toBe(false);
+  expect(()=>o.lookup(k)).toThrow("Google write outbox unavailable");
+  expect(()=>o.settle(k,{status:"confirmed"})).toThrow("Google write outbox unavailable");
+  expect(existsSync(lockPath)).toBe(true);
+  expect(readFileSync(lockPath,"utf8")).toBe("x");
+  unlinkSync(lockPath);
+  expect(o.claim(k)).toBe(true);
+});
+test("capacity",()=>{
+  let lines=""; for(let i=0;i<4096;i++) lines+='{"keyHash":"'+k64(i)+'","status":"attempted"}\n';
+  writeFileSync(journalPath,lines);
+  const o=createGoogleWriteOutbox({journalPath});
+  expect(o.claim(k64(4096))).toBe(false);
+  expect(o.lookup(k64(0))?.status).toBe("attempted");
+  expect(()=>o.settle(k64(0),{status:"confirmed"})).toThrow("Google write outbox unavailable");
+  writeFileSync(journalPath, Buffer.alloc(2*1024*1024+1,97));
+  expect(o.claim(k64(5000))).toBe(false);
+  expect(()=>o.lookup(k64(0))).toThrow("Google write outbox unavailable");
+  expect(statSync(journalPath).size).toBe(2*1024*1024+1);
+});
+test("invalid providerId and constructor",()=>{
+  const o=createGoogleWriteOutbox({journalPath});
+  const k=k64(60); expect(o.claim(k)).toBe(true);
+  const before=existsSync(journalPath)?readFileSync(journalPath,"utf8"):"";
+  expect(()=>o.settle(k,{status:"confirmed",providerId:"a@b.com"})).toThrow("Google write outbox unavailable");
+  expect(()=>o.settle(k,{status:"confirmed",providerId:"bad\x01"})).toThrow("Google write outbox unavailable");
+  expect(()=>o.settle(k,{status:"confirmed",providerId:"a".repeat(257)})).toThrow("Google write outbox unavailable");
+  const after=readFileSync(journalPath,"utf8"); expect(after).toBe(before);
+  expect(()=>o.settle(k64(61),{status:"confirmed",providerId:"bad@email"})).toThrow("Google write outbox unavailable");
+  expect(existsSync(journalPath)).toBe(true);
+  expect(()=>createGoogleWriteOutbox({journalPath:"relative/path"})).toThrow("Google write outbox unavailable");
+});
+test("restart proof child process",()=>{
+  const srcPath=fileURLToPath(new URL("../src/googleWriteOutbox.ts", import.meta.url));
+  const src=readFileSync(srcPath,"utf8");
+  const out=transpileModule(src,{compilerOptions:{module:ModuleKind.ESNext,target:ScriptTarget.ES2022}});
+  writeFileSync(compiledPath,out.outputText);
+  const key=k64(70);
+  const parent=createGoogleWriteOutbox({journalPath});
+  expect(parent.claim(key)).toBe(true);
+  const modUrl=pathToFileURL(compiledPath).href;
+  const childScript=`import{createGoogleWriteOutbox} from ${JSON.stringify(modUrl)};const j=${JSON.stringify(journalPath)};const k=${JSON.stringify(key)};const o=createGoogleWriteOutbox({journalPath:j});const claimed=o.claim(k);const state=o.lookup(k);process.stdout.write(JSON.stringify({pid:process.pid,claimed,state}));`;
+  const out1=execFileSync(process.execPath,["--input-type=module","-e",childScript],{encoding:"utf8",shell:false,windowsHide:true});
+  const r1=JSON.parse(out1) as {pid:number;claimed:boolean;state:{status:string}};
+  expect(r1.pid).not.toBe(process.pid); expect(r1.claimed).toBe(false); expect(r1.state.status).toBe("attempted");
+  parent.settle(key,{status:"confirmed",providerId:"id123"});
+  const childScript2=`import{createGoogleWriteOutbox} from ${JSON.stringify(modUrl)};const j=${JSON.stringify(journalPath)};const k=${JSON.stringify(key)};const o=createGoogleWriteOutbox({journalPath:j});const claimed=o.claim(k);const state=o.lookup(k);process.stdout.write(JSON.stringify({pid:process.pid,claimed,state}));`;
+  const out2=execFileSync(process.execPath,["--input-type=module","-e",childScript2],{encoding:"utf8",shell:false,windowsHide:true});
+  const r2=JSON.parse(out2) as {pid:number;claimed:boolean;state:{status:string;providerId?:string}};
+  expect(r2.claimed).toBe(false); expect(r2.state.status).toBe("confirmed"); expect(r2.state.providerId).toBe("id123");
+});

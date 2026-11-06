@@ -1,0 +1,8 @@
+# Canonical sealed-data paths (repo-relative, one per line, '#' comments allowed).
+# Entries ending with '/' are directories; others are exact file prefixes.
+# CI clones exclude these via sparse-checkout, the secret scanner skips them,
+# and the test guard refuses to read them.
+services/bot/fixtures/holdout-v1/
+eval/heldout/
+eval/heldout-presealed.sha256
+eval/shield-heldout.sha256

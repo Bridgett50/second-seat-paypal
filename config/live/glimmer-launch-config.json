@@ -1,0 +1,64 @@
+{
+  "configVersion": 1,
+  "sourceSha": "ff2d63f48589ecf0f85a234c3277249fab4c85bc",
+  "dataset": {
+    "id": "pii",
+    "sha256": "eb3da376443bd66aba9fd4e4eb345620b64cdba6078a4bfbece82ff0027bde43"
+  },
+  "model": {
+    "name": "meta-models/Muse-Glimmer-30B",
+    "revision": "cec94fcfd6512f2cfe708138c32533b346ea4f69"
+  },
+  "image": {
+    "ref": "vllm/vllm-openai@sha256:413c8fbecb1204a218117c77a4ea4b3a211d5686ff99c31d82ba6dd0cec8c5a6",
+    "digest": "sha256:413c8fbecb1204a218117c77a4ea4b3a211d5686ff99c31d82ba6dd0cec8c5a6"
+  },
+  "prompt": {
+    "sha256": "287f1971666026c1df1f14628157873521a32f2e1d528ae882ccc05a8a92d1b5"
+  },
+  "schema": {
+    "sha256": "fa3842b7a1b5ec0d0aa9fe5fa5a474c12df9780590a785307fc99730549a08ac"
+  },
+  "scorer": {
+    "sha256": "ba0a0756298c98c0eb95cf57709d8ac5080e7243e7774e06e8bee85330bf6481"
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewer": "Bridgett Sanders",
+    "reviewed_at": "2026-10-28",
+    "dataset_sha256": "eb3da376443bd66aba9fd4e4eb345620b64cdba6078a4bfbece82ff0027bde43",
+    "note": "Bridgett Sanders approved a prompt-only re-freeze on 2026-10-28 (1:48 PM CT): date_of_birth is only a stated birthday, ordinary calendar dates stay unmasked. Model revision, image digest, schema, and scorer pins unchanged."
+  },
+  "decoding": {
+    "temperature": 0,
+    "seed": 1,
+    "reasoning": "low"
+  },
+  "tokenLimits": {
+    "maxTokens": 2048,
+    "contextTokens": 16384
+  },
+  "timeouts": {
+    "requestMs": 90000,
+    "workDeadlineS": 780,
+    "functionTimeoutS": 840
+  },
+  "retry": {
+    "maxAttempts": 1
+  },
+  "modal": {
+    "allocations": 1,
+    "concurrency": 1,
+    "maxConcurrency": 2,
+    "scoredCanary": true,
+    "teardown": true,
+    "evidenceDownload": "complete"
+  },
+  "glimmerDemoRequests": 0,
+  "budget": {
+    "status": "PROPOSED",
+    "modalUsd": 2,
+    "sparkUsd": 0.1,
+    "totalUsd": 2.1
+  }
+}

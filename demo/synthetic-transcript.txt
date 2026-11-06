@@ -1,0 +1,13 @@
+[00:08] Ellis Ward: Amira, thanks for calling back. I'm Ellis Ward at Northglass Retail Systems. You can reach me at 555-013-8844 or ellis.ward@northglass-retail.example.
+[00:22] Amira Solano: Glad to. We are opening a small grocery counter and we need one self-checkout unit.
+[00:36] Ellis Ward: The unit we scoped is the Power Counter.
+[00:48] Amira Solano: Walk me through the behind-the-glass layout.
+[01:02] Ellis Ward: The scanner stays on the counter behind the glass. The customer screen and the payment terminal sit on the other side. A pass-through drawer connects the two sides.
+[01:20] Amira Solano: And the price. Your written quote says seven hundred fifty dollars a month.
+[01:32] Ellis Ward: That is the number on the quote, yes. Seven hundred fifty a month for one Power Counter.
+[01:44] Amira Solano: On the phone we agreed seven hundred a month. I am reminding you of that.
+[01:55] Ellis Ward: I remember the phone call. The written quote still prints seven hundred fifty.
+[02:08] Amira Solano: So the paper is fifty dollars a month higher than what we said.
+[02:20] Ellis Ward: If you sign by November 15, I can get it installed by opening day.
+[02:34] Amira Solano: I am not signing the seven-fifty quote on a deadline. Send the corrected written quote and I will review it.
+[02:48] Ellis Ward: Understood. The install date I named depends on a signature by November 15.

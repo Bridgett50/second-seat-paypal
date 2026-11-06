@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.next/
+coverage/
+.env*
+!.env.example
+*.log
+eval/heldout/
+.DS_Store
+services/bot/.cost-log.jsonl
+services/bot/.muse-daily-state.json
+__pycache__/
+services/bot/.hero-chain-state.json
+.muse/scope.txt
+.muse/criteria.json
+evidence/*/session-*.jsonl
+evidence/*/session-export.json

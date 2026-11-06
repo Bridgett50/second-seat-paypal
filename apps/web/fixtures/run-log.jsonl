@@ -1,0 +1,8 @@
+{"at":"2026-10-26T12:00:01.000Z","model":"meta-models/Muse-Glimmer-30B","note":"mock","stage":"glimmer-redact"}
+{"at":"2026-10-26T12:00:02.000Z","model":"muse-spark-1.3","stage":"spark-brief"}
+{"at":"2026-10-26T12:00:03.000Z","model":"muse-spark-1.3","stage":"spark-shield"}
+{"at":"2026-10-26T12:00:04.000Z","model":"muse-image","stage":"image-slide"}
+{"at":"2026-10-26T20:11:38.195Z","model":"muse-image-1.0","stage":"image-slide","note":"synthetic vendor slide","masked":false}
+{"at":"2026-10-26T20:11:38.195Z","model":"sam-3.1","stage":"sam-region","note":"box {\"x\":0,\"y\":0,\"w\":167772160,\"h\":67108864} flags=region_spotcheck_failed","masked":false}
+{"at":"2026-10-26T20:12:13.867Z","model":"muse-image-1.0","stage":"image-slide","note":"synthetic vendor slide","masked":false}
+{"at":"2026-10-26T20:12:13.868Z","model":"sam-3.1","stage":"sam-region","note":"box {\"x\":0,\"y\":0,\"w\":1920,\"h\":1280} flags=region_spotcheck_failed","masked":false}

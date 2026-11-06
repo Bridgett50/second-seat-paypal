@@ -1,0 +1,28 @@
+{
+  "name": "@second-seat/web",
+  "version": "0.1.0",
+  "description": "Second Seat web app stub. Hero page arrives in a later phase.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node dist/src/build.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "serve": "node dist/src/server.js",
+    "e2e": "playwright test",
+    "prebuild": "pnpm --filter @second-seat/core build && pnpm --filter @second-seat/bot build",
+    "pretest": "pnpm --filter @second-seat/core build && pnpm --filter @second-seat/bot build",
+    "preserve": "pnpm --filter @second-seat/core build && pnpm --filter @second-seat/bot build",
+    "pretypecheck": "pnpm --filter @second-seat/core build && pnpm --filter @second-seat/bot build"
+  },
+  "dependencies": {
+    "@second-seat/bot": "workspace:*",
+    "@second-seat/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.0",
+    "typescript": "5.6.3",
+    "vitest": "2.1.8"
+  }
+}
